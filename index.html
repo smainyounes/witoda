@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <!-- custom range slider -->
+    <link rel="stylesheet" href="vendor/slider/style.css">
+    <script src="vendor/slider/script.js"></script>
+    
+    <!-- custom date picker -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    
+    <link rel="stylesheet" href="vendor/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl/owl.theme.default.min.css">
+    <script src="vendor/owl/owl.carousel.min.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Home</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+        <div class="container">
+
+            <a class="navbar-brand mr-4" href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-3">
+                  <a class="nav-link text-primary" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">About</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+              </ul>
+              <div>
+                  <button class="btn btn-primary">Rejoignez-nous</button>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="">
+        <div style="background-image: url(images/Hero_bg.jpg); background-size: cover; background-position: center center; height: 60vh;">
+            <div class="container pt-5">
+                <h6 class="text-white font-weight-500 mb-0">Agence touristique - Hotel - Location des voitures</h6>
+                <h1 class="text-white font-weight-800" style="font-size: 4rem;">Explorez le monde <br>
+                    avec nous !</h1>
+                <button class="btn btn-primary">Lancez votre recherche</button>
+                <!-- <div class="header-box p-5">hello</div> -->
+            </div>
+        </div>
+        <div class="container p-4 header-box" style="margin-top: -80px;">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="voyage-tab" data-toggle="tab" href="#voyage" role="tab" aria-controls="voyage" aria-selected="true">Voyage</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link" id="avion-tab" data-toggle="tab" href="#avion" role="tab" aria-controls="avion" aria-selected="false">Avion</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show py-4 active" id="voyage" role="tabpanel" aria-labelledby="voyage-tab">
+                    <h5 class="font-weight-700 text-dark">Réservez des forfaits maintenant !</h5>
+                    <h5 class="text-muted"><small>Découvrez les différents forfaits de voyages organisés.</small></h5>
+
+                    <div class="row mt-4">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/globe.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Pays</small>
+                                        <select class="form-control form-control-sm border-0" name="" id="">
+                                            <option value="" disabled selected class="text-muted">Select pays</option>
+                                            <option value="">Algerie</option>
+                                            <option value="">Tunisie</option>
+                                            <option value="">Maroc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/plane.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Méthode de voyage</small>
+                                        <select class="form-control form-control-sm border-0" name="" id="">
+                                            <option value="" disabled selected>Select méthod de voyage</option>
+                                            <option value="">Algerie</option>
+                                            <option value="">Tunisie</option>
+                                            <option value="">Maroc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/calendar.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Du</small>
+                                        <input class="form-control form-control-sm border-0 bg-white" type="date" name="" id="" placeholder="DD/MM/YYYY">
+                                    </div>
+                                </div>
+                                <div class="d-flex col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/calendar.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Au</small>
+                                        <input class="form-control form-control-sm border-0 bg-white" type="date" name="" id="" placeholder="DD/MM/YYYY">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary">Explorez</button>
+                        </div>
+                        <!-- <div class="d-flex align-items-center justify-content-center">
+                            <button class="btn btn-primary">Explorez</button>
+                        </div> -->
+                    </div>
+
+                    <div class="collapse" id="collapseExample">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <div class="row">
+                                    <div class="col-md-3 d-flex mt-4">
+                                        <div class="d-flex w-100">
+                                            <div class="border rounded-circle align-self-center mr-2 d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                                <img src="images/icons/hotel.png" alt="">
+                                            </div>
+                                            <div class="flex-fill">
+                                                <small>Hôtel catégorie</small>
+                                                <select class="form-control form-control-sm border-0 w-100" name="" id="">
+                                                    <option value="" disabled selected class="text-muted">Select hôtel</option>
+                                                    <option value="">Algerie</option>
+                                                    <option value="">Tunisie</option>
+                                                    <option value="">Maroc</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3 d-flex mt-4">
+                                        <div class="d-flex w-100">
+                                            <div class="border rounded-circle align-self-center mr-2 d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                                <img src="images/icons/bed.png" alt="">
+                                            </div>
+                                            <div class="flex-fill">
+                                                <small>Nombre de places</small>
+                                                <select class="form-control form-control-sm border-0 w-100" name="" id="">
+                                                    <option value="" disabled selected class="text-muted">Nombre de places</option>
+                                                    <option value="">Algerie</option>
+                                                    <option value="">Tunisie</option>
+                                                    <option value="">Maroc</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 d-flex mt-4">
+                                        <div class="d-flex w-100">
+                                            <div class="border rounded-circle align-self-center mr-2 d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                                <img src="images/icons/ticket.png" alt="">
+                                            </div>
+                                            <div class="flex-fill">
+                                                <small>Prix</small>
+                                                <div id="slider-range"></div>
+                                                <div class="d-flex justify-content-between">
+                                                    <small class=" caption">
+                                                      <span id="slider-range-value1"></span>
+                                                    </small>
+                                                    <small class="caption">
+                                                      <span id="slider-range-value2"></span>
+                                                    </small>
+                                                </div>
+                                                <input type="text" name="" id="min-value" hidden>
+                                                <input type="text" name="max-value" id="max-value" hidden>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <button class="btn btn-link mt-4" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <span>Recherche avancée</span>
+                        
+                        <img class="ml-2" id="advancedSearch" src="images/icons/plus.png" alt="">
+                    </button>
+                </div>
+                <div class="tab-pane fade py-4" id="avion" role="tabpanel" aria-labelledby="avion-tab">
+                    <h5 class="font-weight-700 text-dark">Réservez des forfaits maintenant !</h5>
+                    <h5 class="text-muted"><small>Découvrez les différents forfaits de voyages organisés.</small></h5>
+
+                    <div class="row mt-4">
+                        <div class="col-md-10">
+                            <div class="row">
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/globe.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Pays</small>
+                                        <select class="form-control form-control-sm border-0" name="" id="">
+                                            <option value="" disabled selected class="text-muted">Select pays</option>
+                                            <option value="">Algerie</option>
+                                            <option value="">Tunisie</option>
+                                            <option value="">Maroc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/plane.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Méthode de voyage</small>
+                                        <select class="form-control form-control-sm border-0" name="" id="">
+                                            <option value="" disabled selected>Select méthod de voyage</option>
+                                            <option value="">Algerie</option>
+                                            <option value="">Tunisie</option>
+                                            <option value="">Maroc</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-flex pr-2 col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/calendar.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Du</small>
+                                        <input class="form-control form-control-sm border-0 bg-white" type="date" name="" id="" placeholder="DD/MM/YYYY">
+                                    </div>
+                                </div>
+                                <div class="d-flex col-md-3">
+                                    <div class="border rounded-circle align-self-center d-flex align-items-center justify-content-center" style="height: 40px; width: 40px;">
+                                        <img src="images/icons/calendar.png" alt="">
+                                    </div>
+                                    <div class="ml-2">
+                                        <small>Au</small>
+                                        <input class="form-control form-control-sm border-0 bg-white" type="date" name="" id="" placeholder="DD/MM/YYYY">
+                                        
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary">Explorez</button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+    </header>
+
+
+    <section class="container py-5 my-5" id="offres">
+        <div class="border-left border-primary pl-3 d-flex justify-content-between align-items-center">
+            <div>
+                <small class="text-primary">Explorez meilleur offres</small>
+                <h1 class="font-weight-bold">Meilleur Offres</h1>
+            </div>
+            <div>
+                <button class="btn btn-link customPrevBtn">
+                    <img src="images/icons/Icon left.png" alt="">
+                </button>
+                <button class="btn btn-link customNextBtn">
+                    <img src="images/icons/Icon right.png" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="owl-carousel mt-5">
+            <div class="">
+                <div class="offre-card p-3 ">
+                    <div class="img-container">
+                        <img class="img-fluid rounded-16" src="images/offres/1.png" alt="">
+                        <div class="card-pill">
+                            <img src="images/flags/dz.png" alt="">
+                            Alger -
+                            <img src="images/flags/tr.png" alt="">
+                            Turkie
+                        </div>
+                    </div>
+                    <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                    <div class="offre-card-body ">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="bg-gray rounded p-2">
+                                Visites familiales
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-1" src="images/icons/star.png" alt="">
+                                <span>3 étoiles</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 14px;">
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                <span>Houria Palace</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/clock.png" alt="">
+                                <span>6 jours 5 Nuits</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/bed.png" alt="">
+                                    <span>Places disponible</span>
+                                </div>
+                                <span class="badge-yellow">24</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Prix</span>
+                                </div>
+                                <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Cashback</span>
+                                </div>
+                                <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                            </div>
+                            <button class="btn btn-primary w-100">Voir les détails</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="offre-card p-3 ">
+                    <div class="img-container">
+                        <img class="img-fluid rounded-16" src="images/offres/2.png" alt="">
+                        <div class="card-pill">
+                            <img src="images/flags/dz.png" alt="">
+                            Alger -
+                            <img src="images/flags/tr.png" alt="">
+                            Turkie
+                        </div>
+                    </div>
+                    <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                    <div class="offre-card-body ">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="bg-gray rounded p-2">
+                                Visites familiales
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-1" src="images/icons/star.png" alt="">
+                                <span>3 étoiles</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 14px;">
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                <span>Houria Palace</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/clock.png" alt="">
+                                <span>6 jours 5 Nuits</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/bed.png" alt="">
+                                    <span>Places disponible</span>
+                                </div>
+                                <span class="badge-yellow">24</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Prix</span>
+                                </div>
+                                <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Cashback</span>
+                                </div>
+                                <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                            </div>
+                            <button class="btn btn-primary w-100">Voir les détails</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div class="offre-card p-3 ">
+                    <div class="img-container">
+                        <img class="img-fluid rounded-16" src="images/offres/3.png" alt="">
+                        <div class="card-pill">
+                            <img src="images/flags/dz.png" alt="">
+                            Alger -
+                            Oran
+                        </div>
+                    </div>
+                    <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                    <div class="offre-card-body ">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div class="bg-gray rounded p-2">
+                                Visites familiales
+                            </div>
+                            <div class="d-flex align-items-center">
+                                <img class="mr-1" src="images/icons/star.png" alt="">
+                                <span>3 étoiles</span>
+                            </div>
+                        </div>
+                        <div style="font-size: 14px;">
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                <span>Houria Palace</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/clock.png" alt="">
+                                <span>6 jours 5 Nuits</span>
+                            </div>
+                            <div class="mb-3">
+                                <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                            </div>
+                            <div class="d-flex justify-content-between mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/bed.png" alt="">
+                                    <span>Places disponible</span>
+                                </div>
+                                <span class="badge-yellow">24</span>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Prix</span>
+                                </div>
+                                <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <div>
+                                    <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                    <span>Cashback</span>
+                                </div>
+                                <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                            </div>
+                            <button class="btn btn-primary w-100">Voir les détails</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5">
+            <button class="btn btn-primary">Voir tous les offres</button>
+        </div>
+    </section>
+
+    <section class="my-5 py-5" id="places">
+        <div class="container">
+            <div class="border-left border-primary pl-3">
+                <small class="text-primary">Explorez meilleur places</small>
+                <h1 class="font-weight-bold">Meilleur places</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-6 mb-4">
+                    <img class="img-fluid rounded-16" src="images/places/1.png" alt="">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6 mb-4">
+                            <img class="img-fluid rounded-16" src="images/places/2.png" alt="">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <img class="img-fluid rounded-16" src="images/places/3.png" alt="">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <img class="img-fluid rounded-16" src="images/places/4.png" alt="">
+                        </div>
+                        <div class="col-6 mb-4">
+                            <img class="img-fluid rounded-16" src="images/places/5.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="images/logo-white.png" alt="">
+                    <p class="text-white-75 mt-4 font-size-12 font-weight-400">Nous rendons toujours nos clients heureux en offrant autant de choix que possible.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">About</h3>
+                    <div class="d-flex flex-column font-size-12 font-weight-400">
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Autour de nous</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Contact</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Termes et conditions</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Contactez-nous</h3>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Envelope_icon.png" alt="">
+                        <span class="text-white-75">witodagold@contact.com</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Phone_icon.png" alt="">
+                        <span class="text-white-75">1245972678/589402165</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Marker_icon.png" alt="">
+                        <span class="text-white-75">street - city - country</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Suivez nous</h3>
+                    <p class="text-white-75 font-weight-400 font-size-12">Suivez-nous sur tous nos réseaux sociaux et recevez les dernières nouvelles sur Facebook, des vidéos pratiques sur Youtube et de magnifiques photos inspirantes sur Instagram et Pinterest.</p>
+
+                    <div class="d-flex mb-3">
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Facebook_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Twitter_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Instagram_icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white-75 border-top pt-3 border-white-75 font-size-12 font-weight-400">
+                Tous Les Droits Sont Réservés Pour Ce Site 
+            </div>
+        </div>
+    </footer>
+
+    <script>
+
+        // event to change the minus and plus icon
+        $('#collapseExample').on('show.bs.collapse', function () {
+            $('#advancedSearch').attr('src', 'images/icons/minus.png');
+        });
+
+        $('#collapseExample').on('hide.bs.collapse', function () {
+            $('#advancedSearch').attr('src', 'images/icons/plus.png');
+        });
+
+        // init custom datepicker
+        $('input[type="date"]').flatpickr({
+			'locale': 'fr',
+            dateFormat: "d/m/Y",
+		});
+
+        // js to init the slider
+        $(document).ready(function () {
+            $('.noUi-handle').on('click', function () {
+                $(this).width(50);
+            });
+            var rangeSlider = document.getElementById('slider-range');
+            var moneyFormat = wNumb({
+                decimals: 0,
+                thousand: ',',
+            });
+            noUiSlider.create(rangeSlider, {
+                start: [500000, 1000000],
+                step: 1,
+                range: {
+                'min': [100000],
+                'max': [1000000]
+                },
+                format: moneyFormat,
+                connect: true
+            });
+
+            // Set visual min and max values and also update value hidden form inputs
+            rangeSlider.noUiSlider.on('update', function (values, handle) {
+                document.getElementById('slider-range-value1').innerHTML = values[0];
+                document.getElementById('slider-range-value2').innerHTML = values[1];
+
+                document.getElementById('min-value').value = values[0];
+                document.getElementById('max-value').value = values[1];
+            });
+        });
+
+        // owl carousel
+        let owl = $('.owl-carousel').owlCarousel({
+            loop:true,
+            margin:10,
+            stageOuterClass: 'owl-stage-outer pb-4',
+            responsive:{
+                0:{
+                    items:1
+                },
+                600:{
+                    items:3
+                },
+                1000:{
+                    items:3
+                }
+            }
+        });
+
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+        // Go to the previous item
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel');
+        });
+    </script>
+
+  </body>
+</html>
