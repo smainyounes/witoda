@@ -26,7 +26,7 @@ body{
 }
 
 .font-size-14{
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .btn{
@@ -58,6 +58,36 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input[type=file]::file-selector-button {
+    border: 0;
+    color: white;
+    padding: .4em .8em;
+    border-radius: 8px;
+    background-color: #3B71FE;
+}
+  
+input[type=file]::file-selector-button:hover {
+    background-color: #5787ff;
+}
+
 .img-container{
     max-height: 200px;
     overflow-y: hidden;
@@ -82,6 +112,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 .offre-card{
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
+    max-width: 20em;
 }
 
 .card-pill{
@@ -96,12 +127,40 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-radius: 16px;
 }
 
+.rounded-8{
+    border-radius: 8px;
+}
+
+.rounded-left-8{
+    border-radius: 8px 0 0 8px;
+}
+
+.rounded-right-8{
+    border-radius: 0 8px 8px 0;
+}
+
 .text-white-75{
     color: rgba(255, 255, 255, 0.75);
 }
 
 .text-dark{
     color: #3E444D;
+}
+
+.text-primary{
+    color: #3B71FE;
+}
+
+.custom-dropdown{
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(32px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 16px;
+    border: 0;
+}
+
+.modal-blur{
+    backdrop-filter: blur(8px);
 }
 /* overwriting bootstrap css */
 
@@ -129,8 +188,55 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     border-left: 0;
 }
 
+.form-control:focus {
+    box-shadow: none;
+    border-color: #ced4da;
+}
+
+.btn-link:focus{
+    box-shadow: none;
+}
+
+.btn-primary {
+    color: white;
+    background-color: #3B71FE;
+    border-color: #3B71FE
+}
+
+.btn-primary:hover {
+    color: white;
+    background-color: #6E97FF;
+    border-color: #6E97FF
+}
+
+.btn-primary:focus,
+.btn-primary.focus {
+    box-shadow: 0 0 0 .2rem rgba(91, 194, 194, 0.5)
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    color: white;
+    background-color: #6E97FF;
+    border-color: #5bc2c2
+}
+
+.btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary:not(:disabled):not(.disabled).active,
+.show>.btn-primary.dropdown-toggle {
+    color: white;
+    background-color: #6E97FF;
+    border-color: #2e7c7c
+}
+
+
 /* overwriting owl carousel css */
 .owl-carousel .owl-item img {
     display: initial;
     width: unset;
+}
+
+/* overwriting selectpicker */
+.bootstrap-select .dropdown-toggle:focus, .bootstrap-select>select.mobile-device:focus+.dropdown-toggle{
+    outline: 0!important;
 }

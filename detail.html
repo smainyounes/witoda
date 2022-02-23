@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <!-- custom range slider -->
+    <link rel="stylesheet" href="vendor/slider/style.css">
+    <script src="vendor/slider/script.js"></script>
+    
+    <!-- custom date picker -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    
+    <link rel="stylesheet" href="vendor/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl/owl.theme.default.min.css">
+    <script src="vendor/owl/owl.carousel.min.js"></script>
+
+    <!-- select picker -->
+    <link rel="stylesheet" href="vendor/selectpicker/bootstrap-select.min.css">
+    <script src="vendor/selectpicker/bootstrap-select.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Detail Offre</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-3">
+                  <a class="nav-link text-primary" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">About</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+              </ul>
+              <!-- <button class="btn btn-primary">Rejoignez-nous</button> -->
+              <div class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    <div class="rounded-circle bg-info" style="width: 40px; height: 40px; border: 2px solid white; box-shadow: 0 .2rem .5rem rgba(0,0,0,.15)!important;">
+                      <!-- <img class="rounded-circle" width="20px" height="20px" src="#" alt=""> -->
+                    </div>
+                    <span class="ml-2">Mon compte</span>
+                    </a>
+                    <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Emission</a>
+                        <a class="dropdown-item" href="#">Réception</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Créer un offre</a>
+                        <a class="dropdown-item" href="#">Mes offres</a>
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Tableau de board</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item text-danger" href="#">Déconnecter</a>
+                    </div>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="">
+        <div style="background-image: url(images/Hero_bg.jpg); background-size: cover; background-position: center center; height: 60vh;">
+            <div class="container h-100 d-flex align-items-center">
+                <div>
+                    <h6 class="text-white font-weight-500 mb-0">Agence touristique - Hotel - Location des voitures</h6>
+                    <h1 class="text-white font-weight-800" style="font-size: 4rem;">Explorez le monde <br>
+                        avec nous !</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mb-5 mt-3">
+        <span class="text-muted font-weight-400">Accueil</span>
+        <span class="mx-3"> > </span>
+        <span class="text-primary font-weight-700">Détails de l’offre</span>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="border-left border-primary pl-3">
+                    <small class="text-primary">Plus</small>
+                    <h1 class="font-weight-bold text-dark">Détails de l’offre</h1>
+                    
+                </div>
+                <div class="text-dark font-weight-700 h5 my-4">
+                    <img src="images/flags/dz.png" alt="">
+                    <span>Algerie - </span>
+                    <img src="images/flags/tr.png" alt="">
+                    <span>Tunisie</span>
+                </div>
+                <div class="d-flex justify-content-between align-items-end mb-3">
+                    <div class="h5 text-dark font-weight-700">Détails de l'offre</div>
+                    <button class="btn btn-link text-dark align-self-start" data-toggle="dropdown">
+                        <img src="images/icons/dots.png" alt="">
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right custom-dropdown text-dark">
+                        <a class="dropdown-item" href="#deletemodal" data-toggle="modal" data-target="#deletemodal">Supprimer</a>
+                        <a class="dropdown-item" href="#">Créer un offre</a>
+                        <a class="dropdown-item" href="#connectmodal" data-toggle="modal" data-target="#connectmodal">Connecter l’offre</a>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Info_icon.png" alt="">
+                        <span>
+                            Informations générales
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Type Voyage</span>
+                        <span>Interieur</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Type Tourisme</span>
+                        <span>Visite Familiale</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Véhicule</span>
+                        <span>Bus</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Places disponibles</span>
+                        <span>22/45</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/map-marker 1.png" alt="">
+                        <span>
+                            Déstination
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Alger</span>
+                        <span>Suède</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Calendar_icon.png" alt="">
+                        <span>
+                            Date & Heure
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <div>
+                            <small>Départ</small> <br>
+                            <span>12/04/2021</span>
+                        </div>
+                        <div>
+                            <small>Retour</small> <br>
+                            <span>12/04/2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                        <span>
+                            Hotel
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Hotel</span>
+                        <span>Chiratoune</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Nombre de nuits</span>
+                        <span>5</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Nombre de jours</span>
+                        <span>4</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Bed_icon.png" alt="">
+                        <span>
+                            Les Chambres
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>1 par chambre</span>
+                        <span>+ 2500.00 DZD</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>3 par chambre</span>
+                        <span>- 1500.00 DZD</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Food_icon.png" alt="">
+                        <span>
+                            Repas
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Salad</span>
+                        <span></span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Salad</span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Food_icon.png" alt="">
+                        <span>
+                            Choses payées collectives
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Jus</span>
+                        <span>123.00 DZD</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Jus</span>
+                        <span>123.00 DZD</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Food_icon.png" alt="">
+                        <span>
+                            Choses payées individuèlles
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <span>Jus</span>
+                        <span>123.00 DZD</span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <span>Jus</span>
+                        <span>123.00 DZD</span>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/User_icon.png" alt="">
+                        <span>
+                            Prix des Enfant
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <div class="mr-4">
+                            <small>Min age</small> <br>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <small>Max age</small> <br>
+                            <span>6</span>
+                        </div>
+                        <div class="flex-fill text-right">
+                            <small>Prix</small> <br>
+                            <span>5260.00 DZD</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <div class="mr-4">
+                            <small>Min age</small> <br>
+                            <span>5</span>
+                        </div>
+                        <div>
+                            <small>Max age</small> <br>
+                            <span>12</span>
+                        </div>
+                        <div class="flex-fill text-right">
+                            <small>Prix</small> <br>
+                            <span>45620.00 DZD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/User_icon.png" alt="">
+                        <span>
+                            Enfant Gratuit
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <div>
+                            <small>Min age</small> <br>
+                            <span>1</span>
+                        </div>
+                        <div>
+                            <small>Max age</small> <br>
+                            <span>6</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="font-weight-500">
+                    <div class="p-2 bg-gray d-flex align-items-center">
+                        <img class="mr-2" src="images/icons/Car_icon.png" alt="">
+                        <span>
+                            Ramassage
+                        </span>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 border-bottom text-dark">
+                        <div class="mr-4">
+                            <small>Wilaya</small> <br>
+                            <span>Alger</span>
+                        </div>
+                        <div>
+                            <small>Addresse</small> <br>
+                            <span>Kharouba</span>
+                        </div>
+                        <div class="flex-fill text-right">
+                            <small>Temp</small> <br>
+                            <span>10:00</span>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between py-2 text-dark">
+                        <div class="mr-4">
+                            <small>Wilaya</small> <br>
+                            <span>Annaba</span>
+                        </div>
+                        <div>
+                            <small>Addresse</small> <br>
+                            <span>Annaba centre</span>
+                        </div>
+                        <div class="flex-fill text-right">
+                            <small>Temp</small> <br>
+                            <span>22:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <button type="button" class="btn btn-link mainPrev" style="position: absolute; left: 10px; top: 225px; z-index: 2;">
+                    <img src="images/icons/left.png" alt="">
+                </button>
+                <div class="owl-carousel main-img-carousel">
+                    <div class="rounded-16" style="max-height: 450px; overflow-y: hidden">
+                        <img class="img-fluid rounded-16 w-100 main-img" src="images/detail/main1.png" alt="">
+                    </div>
+                    <div class="rounded-16" style="max-height: 450px; overflow-y: hidden">
+                        <img class="img-fluid rounded-16 w-100 main-img" src="images/detail/main2.png" alt="">
+                    </div>
+                    <div class="rounded-16" style="max-height: 450px; overflow-y: hidden">
+                        <img class="img-fluid rounded-16 w-100 main-img" src="images/detail/main3.png" alt="">
+                    </div>
+                    <div class="rounded-16" style="max-height: 450px; overflow-y: hidden">
+                        <img class="img-fluid rounded-16 w-100 main-img" src="images/detail/main4.png" alt="">
+                    </div>
+                </div>
+                <button type="button" class="btn btn-link mainNext" style="position: absolute; right: 10px; top: 225px; z-index: 2;">
+                    <img src="images/icons/right.png" alt="">
+                </button>
+                <div>
+                    
+                    <div class="owl-carousel images-carousel">
+                        <!-- the argument of changeimg is (the img count - 1 ) -->
+                        <div class="mx-1 mb-3 text-center rounded-16" style="max-height: 130px; overflow-y: hidden;">
+                            <img class="img-fluid " onclick="changeimg(1 - 1)" src="images/detail/main1.png" alt="">
+                        </div>
+                        <div class="mx-1 mb-3 text-center rounded-16" style="max-height: 130px; overflow-y: hidden;">
+                            <img class="img-fluid " onclick="changeimg(2 - 1)" src="images/detail/main2.png" alt="">
+                        </div>
+                        <div class="mx-1 mb-3 text-center rounded-16" style="max-height: 130px; overflow-y: hidden;">
+                            <img class="img-fluid " onclick="changeimg(3 - 1)" src="images/detail/main3.png" alt="">
+                        </div>
+                        <div class="mx-1 mb-3 text-center rounded-16" style="max-height: 130px; overflow-y: hidden;">
+                            <img class="img-fluid " onclick="changeimg(4 - 1)" src="images/detail/main4.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="d-flex justify-content-between align-items-center">
+                    <div class="d-flex align-items-center">
+                        <h1 class="font-weight-bold text-dark">Autre offres</h1>
+                        <div class="bg-primary rounded-circle ml-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                            <span class="text-white font-weight-700">05</span>
+                        </div>
+                    </div>
+                    <div class="d-flex">
+                        <button class="btn btn-link customPrevBtn">
+                            <img src="images/icons/Icon left.png" alt="">
+                        </button>
+                        <button class="btn btn-link customNextBtn">
+                            <img src="images/icons/Icon right.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <div class="owl-carousel offre-carousel">
+                        <div class="">
+                            <div class="offre-card p-3">
+                                <div class="img-container">
+                                    <img class="img-fluid rounded-16" src="images/offres/1.png" alt="">
+                                    <div class="card-pill">
+                                        <img src="images/flags/dz.png" alt="">
+                                        Alger -
+                                        <img src="images/flags/tr.png" alt="">
+                                        Turkie
+                                    </div>
+                                </div>
+                                <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                                <div class="offre-card-body ">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="bg-gray rounded p-2">
+                                            Visites familiales
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="mr-1" src="images/icons/star.png" alt="">
+                                            <span>3 étoiles</span>
+                                        </div>
+                                    </div>
+                                    <div style="font-size: 14px;">
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                            <span>Houria Palace</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/clock.png" alt="">
+                                            <span>6 jours 5 Nuits</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                            <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/bed.png" alt="">
+                                                <span>Places disponible</span>
+                                            </div>
+                                            <span class="badge-yellow">24</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Prix</span>
+                                            </div>
+                                            <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Cashback</span>
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                                        </div>
+                                        <button class="btn btn-primary w-100">Voir les détails</button>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="offre-card p-3 ">
+                                <div class="img-container">
+                                    <img class="img-fluid rounded-16" src="images/offres/2.png" alt="">
+                                    <div class="card-pill">
+                                        <img src="images/flags/dz.png" alt="">
+                                        Alger -
+                                        <img src="images/flags/tr.png" alt="">
+                                        Turkie
+                                    </div>
+                                </div>
+                                <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                                <div class="offre-card-body ">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="bg-gray rounded p-2">
+                                            Visites familiales
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="mr-1" src="images/icons/star.png" alt="">
+                                            <span>3 étoiles</span>
+                                        </div>
+                                    </div>
+                                    <div style="font-size: 14px;">
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                            <span>Houria Palace</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/clock.png" alt="">
+                                            <span>6 jours 5 Nuits</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                            <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/bed.png" alt="">
+                                                <span>Places disponible</span>
+                                            </div>
+                                            <span class="badge-yellow">24</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Prix</span>
+                                            </div>
+                                            <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Cashback</span>
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                                        </div>
+                                        <button class="btn btn-primary w-100">Voir les détails</button>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="offre-card p-3 ">
+                                <div class="img-container">
+                                    <img class="img-fluid rounded-16" src="images/offres/3.png" alt="">
+                                    <div class="card-pill">
+                                        <img src="images/flags/dz.png" alt="">
+                                        Alger -
+                                        Oran
+                                    </div>
+                                </div>
+                                <h3 class="my-2 font-weight-bold h4">Top promo Tunisie 2020</h3>
+                                <div class="offre-card-body ">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <div class="bg-gray rounded p-2">
+                                            Visites familiales
+                                        </div>
+                                        <div class="d-flex align-items-center">
+                                            <img class="mr-1" src="images/icons/star.png" alt="">
+                                            <span>3 étoiles</span>
+                                        </div>
+                                    </div>
+                                    <div style="font-size: 14px;">
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/hotel.png" alt="">
+                                            <span>Houria Palace</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/clock.png" alt="">
+                                            <span>6 jours 5 Nuits</span>
+                                        </div>
+                                        <div class="mb-3">
+                                            <img class="mr-2" src="images/icons/calendar.png" alt="">
+                                            <span>Du 21 Mar 2020 Au 27 Mar 2020</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/bed.png" alt="">
+                                                <span>Places disponible</span>
+                                            </div>
+                                            <span class="badge-yellow">24</span>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Prix</span>
+                                            </div>
+                                            <div class="h4 mb-0 font-weight-bold">22,000 DA</div>
+                                        </div>
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <img class="mr-2" src="images/icons/ticket.png" alt="">
+                                                <span>Cashback</span>
+                                            </div>
+                                            <div class="h6 mb-0 font-weight-bold text-success">22,000 DA</div>
+                                        </div>
+                                        <button class="btn btn-primary w-100">Voir les détails</button>
+                                    </div>
+            
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="text-dark">
+                    <h4 class="font-weight-700">Description</h4>
+                    <p class="font-weight-400">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
+                <div>
+                    <h4 class="font-weight-700">Program</h4>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="">
+                            <div class="rounded-circle bg-primary mx-2" style="height: 7px; width: 7px;"></div>
+                        </div>
+                        <div class="mr-4 ml-2">
+                            <div class="" style="min-width: 120px; min-height: 120px; overflow: hidden;">
+                                <img class="rounded-16" src="images/program/1.png" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="font-weight-500 text-dark">Jour 01</div>
+                            <div class="font-weight-700 text-dark">visiter les places</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="">
+                            <div class="rounded-circle bg-primary mx-2" style="height: 7px; width: 7px;"></div>
+                        </div>
+                        <div class="mr-4 ml-2">
+                            <div class="" style="min-width: 120px; min-height: 120px; overflow: hidden;">
+                                <img class="rounded-16" src="images/program/2.png" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="font-weight-500 text-dark">Jour 02</div>
+                            <div class="font-weight-700 text-dark">visiter les places</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="">
+                            <div class="rounded-circle bg-primary mx-2" style="height: 7px; width: 7px;"></div>
+                        </div>
+                        <div class="mr-4 ml-2">
+                            <div class="" style="min-width: 120px; min-height: 120px; overflow: hidden;">
+                                <img class="rounded-16" src="images/program/3.png" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="font-weight-500 text-dark">Jour 03</div>
+                            <div class="font-weight-700 text-dark">visiter les places</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="">
+                            <div class="rounded-circle bg-primary mx-2" style="height: 7px; width: 7px;"></div>
+                        </div>
+                        <div class="mr-4 ml-2">
+                            <div class="" style="min-width: 120px; min-height: 120px; overflow: hidden;">
+                                <img class="rounded-16" src="images/program/4.png" alt="">
+                            </div>
+                        </div>
+                        <div class="">
+                            <div class="font-weight-500 text-dark">Jour 04</div>
+                            <div class="font-weight-700 text-dark">visiter les places</div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center my-5">
+                    <div class="rounded-16 p-3 border">
+                        <img src="images/Witoda_logo.png" alt="">
+                    </div>
+                    <div class="ml-3">
+                        <h5 class="text-dark font-weight-700 mb-3">Witoda agency</h5>
+                        <div class="mb-2 d-flex">
+                            <img src="images/icons/Envelope_icon2.png" alt="">
+                            <span class="ml-2 text-dark font-weight-400">witodagold@contact.com</span>
+                        </div>
+                        <div class="mb-2 d-flex">
+                            <img src="images/icons/Phone_icon2.png" alt="">
+                            <span class="ml-2 text-dark font-weight-400">1245972678/589402165</span>
+                        </div>
+                        <div class="mb-2 d-flex">
+                            <img src="images/icons/Marker_icon2.png" alt="">
+                            <span class="ml-2 text-dark font-weight-400">street - city - country</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-weight-700 text-dark">Réservation</h4>
+                    <form action="">
+                        <div class="form-group">
+                            <label for="">Type de véhicule</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                      <img src="images/icons/Car_icon_blue.png" alt="">
+                                  </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01" onchange="transportReserve(this.value)">
+                                    <option value="bus">Bus</option>
+                                    <option value="avion">Avion</option>
+                                    <option value="bateau">Bateau</option>
+                                    <option value="taxi">Taxi</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group" id="person" style="display: none;">
+                            <label for="">Person</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                  <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                      <img src="images/icons/User_icon_blue.png" alt="">
+                                  </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01">
+                                    <option value="">Individuel</option>
+                                    <option value="">Famille</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="">Nombre des adultes</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                        <img src="images/icons/User_icon_blue.png" alt="">
+                                    </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8" type="number" placeholder="Nombre des adultes">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="">Nombre des enfants</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                        <img src="images/icons/User_icon_blue.png" alt="">
+                                    </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8" type="number" placeholder="Nombre des enfants">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-5">
+                            <button class="btn btn-primary px-5">Réserver</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="images/logo-white.png" alt="">
+                    <p class="text-white-75 mt-4 font-size-12 font-weight-400">Nous rendons toujours nos clients heureux en offrant autant de choix que possible.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">About</h3>
+                    <div class="d-flex flex-column font-size-12 font-weight-400">
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Autour de nous</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Contact</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Termes et conditions</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Contactez-nous</h3>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Envelope_icon.png" alt="">
+                        <span class="text-white-75">witodagold@contact.com</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Phone_icon.png" alt="">
+                        <span class="text-white-75">1245972678/589402165</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Marker_icon.png" alt="">
+                        <span class="text-white-75">street - city - country</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Suivez nous</h3>
+                    <p class="text-white-75 font-weight-400 font-size-12">Suivez-nous sur tous nos réseaux sociaux et recevez les dernières nouvelles sur Facebook, des vidéos pratiques sur Youtube et de magnifiques photos inspirantes sur Instagram et Pinterest.</p>
+
+                    <div class="d-flex mb-3">
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Facebook_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Twitter_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Instagram_icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white-75 border-top pt-3 border-white-75 font-size-12 font-weight-400">
+                Tous Les Droits Sont Réservés Pour Ce Site 
+            </div>
+        </div>
+    </footer>
+
+    <!-- delete modal -->
+    <div class="modal modal-blur" tabindex="-1" id="deletemodal">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content border-0 rounded-16">
+            <div class="modal-header border-0 pb-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="font-weight-400" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h3 class="text-dark font-weight-700 h2">Voulez-vous supprimer l'offre ? </h3>
+              <small class="font-weight-400 text-dark">Lorem issum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</small>
+            </div>
+            <div class="modal-footer border-0 d-flex justify-content-between">
+              <button type="button" class="btn btn-light bg-gray" data-dismiss="modal">Annuler</button>
+              <button type="button" class="btn btn-danger">Supprimer</button>
+            </div>
+          </div>
+        </div>
+    </div>
+      
+    <!-- connect modal -->
+    <div class="modal modal-blur" tabindex="-1" id="connectmodal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content border-0 rounded-16">
+            <div class="modal-header border-0 pb-0">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span class="font-weight-400" aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h3 class="text-dark font-weight-700 h2">Les offres disponibles</h3>
+                <small >
+                    <div class="form-group">
+                        <label class="text-dark" for="">Chercher un offre</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control form-control-sm border-right-0 rounded-8 py-4 p-3" placeholder="Chercher un offre" aria-label="Recipient's username" aria-describedby="button-addon2">
+                            <div class="input-group-append">
+                                <button class="btn btn-sm btn-link border border-left-0 rounded-8 p-1">
+                                    <img class="img-fluid" src="images/icons/Search_icon.png" alt="">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="max-height: 60vh; overflow-y: scroll;">
+                        <div class="border rounded-16 p-3 d-flex flex-md-row flex-column align-items-center justify-content-between mb-2">
+                            <div class="d-flex">
+                                <div class="img" style="width: 120px; height: 120px; overflow: hidden;">
+                                    <img class="img-fluid" src="images/offres/small1.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ml-3">
+                                    <h5 class="text-dark font-weight-700">Nom offre</h5>
+                                    <h6 class="text-dark font-weight-500">Places disponibles : 45</h6>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary px-4 my-3">Connecter</button>
+                        </div>
+                        <div class="border rounded-16 p-3 d-flex flex-md-row flex-column align-items-center justify-content-between mb-2">
+                            <div class="d-flex">
+                                <div class="img" style="width: 120px; height: 120px; overflow: hidden;">
+                                    <img class="img-fluid" src="images/offres/small2.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ml-3">
+                                    <h5 class="text-dark font-weight-700">Nom offre</h5>
+                                    <h6 class="text-dark font-weight-500">Places disponibles : 45</h6>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary px-4">Connecter</button>
+                        </div>
+                        <div class="border rounded-16 p-3 d-flex flex-md-row flex-column align-items-center justify-content-between mb-2">
+                            <div class="d-flex">
+                                <div class="img" style="width: 120px; height: 120px; overflow: hidden;">
+                                    <img class="img-fluid" src="images/offres/small3.png" alt="">
+                                </div>
+                                <div class="d-flex flex-column justify-content-center ml-3">
+                                    <h5 class="text-dark font-weight-700">Nom offre</h5>
+                                    <h6 class="text-dark font-weight-500">Places disponibles : 45</h6>
+                                </div>
+                            </div>
+                            <button class="btn btn-primary px-4">Connecter</button>
+                        </div>
+                    </div>
+
+                </small>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <script>
+
+        $('select').selectpicker({
+            'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+        });
+
+        function transportReserve(e){
+            if(e == 'taxi'){
+                $('#person').show();
+            }else{
+                $('#person').hide();
+            }
+        }
+
+        let owl3 = $('.main-img-carousel').owlCarousel({
+            items: 1,
+            stageOuterClass: 'owl-stage-outer pt-4',
+            loop: true
+        });
+
+        function changeimg(e){
+            // $('.main-img').attr('src', e.attr('src'));
+            owl3.trigger('to.owl.carousel', e);
+        }
+
+        $('.mainNext').click(function() {
+            owl3.trigger('next.owl.carousel');
+        });
+        // Go to the previous item
+        $('.mainPrev').click(function() {
+            owl3.trigger('prev.owl.carousel');
+        });
+
+        let owl2 = $('.images-carousel').owlCarousel({
+            responsive:{
+                0:{
+                    items:2
+                },
+                768:{
+                    items:4
+                },
+            },
+            stageOuterClass: 'owl-stage-outer pt-4',
+            loop: true
+        });
+
+        // owl carousel
+        let owl = $('.offre-carousel').owlCarousel({
+            responsive:{
+                0:{
+                    items:1
+                },
+                768:{
+                    items:1.8
+                },
+            },
+            stageOuterClass: 'owl-stage-outer pb-4',
+            loop: true
+        });
+
+        $('.customNextBtn').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+        // Go to the previous item
+        $('.customPrevBtn').click(function() {
+            owl.trigger('prev.owl.carousel');
+        });
+    </script>
+
+  </body>
+</html>
