@@ -29,6 +29,21 @@ body{
     font-size: 14px;
 }
 
+.pricing-div{
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+    border-radius: 24px;
+}
+.pricing-div hr{
+    border: 1px solid #E9EAEC;
+    background-color: #E9EAEC;
+    
+}
+.pricing-div p{
+    color: #636973;
+    margin: 0;
+    padding: 0;
+}
+
 .btn{
     border-radius: 8px;
 }
@@ -70,12 +85,29 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+.left-valid{
+    border-color:#28a745 ;
+}
+.left-invalid{
+    border-color:#dc3545 ;
+}
 /* Firefox */
 input[type=number] {
     -moz-appearance: textfield;
 }
-
+.pricing-file input[type=file] {
+    color: #C8CBD0;
+    font-size: 12px;
+    padding: 3px;
+}
+.pricing-file input[type=file]::file-selector-button {
+    font-size: 12px;
+    border: 0;
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    background-color: #3B71FE;
+}
 input[type=file]::file-selector-button {
     border: 0;
     color: white;
@@ -163,7 +195,18 @@ input[type=file]::file-selector-button:hover {
     backdrop-filter: blur(8px);
 }
 /* overwriting bootstrap css */
-
+.is-valid{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    color: #28a745;
+    background-image: url('/images/icons/CheckCircle.png') !important;
+}
+.is-invalid{
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    color: #dc3545;
+    background-image: url('/images/icons/cross_circle_icon.png') !important;
+}
 .nav-tabs .nav-item .nav-link{
     color: #A0A4AB;
     font-weight: 700;
