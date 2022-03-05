@@ -38,6 +38,9 @@ body{
     background-color: #E9EAEC;
     
 }
+.text-grey{
+    color: #636973;
+}
 .pricing-div p{
     color: #636973;
     margin: 0;

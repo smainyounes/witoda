@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <!-- custom range slider -->
+    <link rel="stylesheet" href="vendor/slider/style.css">
+    <script src="vendor/slider/script.js"></script>
+    
+    <!-- custom date picker -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    
+    <link rel="stylesheet" href="vendor/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl/owl.theme.default.min.css">
+    <script src="vendor/owl/owl.carousel.min.js"></script>
+
+    <!-- select picker -->
+    <link rel="stylesheet" href="vendor/selectpicker/bootstrap-select.min.css">
+    <script src="vendor/selectpicker/bootstrap-select.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Connectez-vous</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-3">
+                  <a class="nav-link text-primary" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">About</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+              </ul>
+              <!-- <button class="btn btn-primary">Rejoignez-nous</button> -->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <div class="rounded-circle bg-info" style="width: 40px; height: 40px; border: 2px solid white; box-shadow: 0 .2rem .5rem rgba(0,0,0,.15)!important;">
+                  <!-- <img class="rounded-circle" width="20px" height="20px" src="#" alt=""> -->
+                </div>
+                <span class="ml-2">Mon compte</span>
+                </a>
+                <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Emission</a>
+                    <a class="dropdown-item" href="#">Réception</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Créer un offre</a>
+                    <a class="dropdown-item" href="#">Mes offres</a>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Tableau de board</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">Déconnecter</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="">
+        <div style="background-image: url(images/Hero_bg.jpg); background-size: cover; background-position: center center; height: 60vh;">
+            <div class="container h-100 d-flex align-items-center">
+                <div>
+                    <h6 class="text-white font-weight-500 mb-0">Agence touristique - Hotel - Location des voitures</h6>
+                    <h1 class="text-white font-weight-800" style="font-size: 4rem;">Explorez le monde <br>
+                        avec nous !</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mb-5 mt-3">
+        <span class="text-muted font-weight-400">Accueil</span>
+        <span class="mx-3"> > </span>
+        <span class="text-primary font-weight-700">Connectez-vous</span>
+    </div>
+
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="border-left border-primary pl-3">
+                    <small class="text-primary">Rejoignez-nous</small>
+                    <h1 class="font-weight-bold text-dark " id="title">Connectez-vous</h1>
+                </div>
+                <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link active" onclick="login()" id="login-tab" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Connecter</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" onclick="register()" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Inscrire</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content" id="myTabContent">
+                      <p class="mt-3 text-grey" for="">Découvrez les différents forfaits de voyages et des voyages organisés et faites des réservations dhôtel, trouvez des forfaits vacances, recherchez des hôtels et des voitures</p>
+                    <div class="tab-pane fade show py-4 active" id="login" role="tabpanel" aria-labelledby="login-tab">
+                        
+                        <label for="">E-mail</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/message.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="number" placeholder="Address électronique">
+                        </div>
+                        <label for="">Mot de passe</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/lock.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="number" placeholder="Mot de passe">
+                        </div>
+                        
+                        
+                        <button type="button" class="btn btn-primary px-5 mb-5">Connecter</button>
+
+                        <div>
+                            <b>Suivez-nous sur nos réseaux sociaux</b>
+                            <div class="mt-3">
+                                <a href="#" class="mr-1"><img src="images/icons/fb.png" width="40px" alt=""></a>
+                                <a href="#" class="mr-1"><img src="images/icons/tiwtter.png" width="40px" alt=""></a>
+                                <a href="#" class="mr-1"><img src="images/icons/insta.png" width="40px" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade py-4" id="register" role="tabpanel" aria-labelledby="register-tab">
+                        <label for="">Nom et prénom</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/User_icon_blue.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom et prénom">
+                        </div>
+                        <label for="">E-mail</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/message.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="email" placeholder="Address électronique">
+                        </div>
+                        <label for="">Wilaya</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                <img src="images/icons/globe.png" alt="">
+                            </label>
+                            </div>
+                            <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01">
+                                <option value="" selected="" disabled="">Wilaya</option>
+                                <option value="">Wilaya1</option>
+                            </select>
+                        </div>
+                        <label for="">Addresse</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/marker.png" width="17px" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Addresse">
+                        </div>
+                        <label for="">Mot de passe</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/lock.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="password" placeholder="Mot de passe">
+                        </div>
+                        <label for="">Répéter mot de passe</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/lock.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="password" placeholder="Mot de passe">
+                        </div>
+                        
+                        
+                        <button type="button" class="btn btn-primary px-5 mb-5">Connecter</button>
+
+                        <div>
+                            <b>Suivez-nous sur nos réseaux sociaux</b>
+                            <div class="mt-3">
+                                <a href="#" class="mr-1"><img src="images/icons/fb.png" width="40px" alt=""></a>
+                                <a href="#" class="mr-1"><img src="images/icons/tiwtter.png" width="40px" alt=""></a>
+                                <a href="#" class="mr-1"><img src="images/icons/insta.png" width="40px" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+            </div>
+            <div class="col-md-5">
+                <img class="img-fluid rounded-16 d-none d-md-block" id="img-right" style="height:80%;width: 100%;" src="images/desert.png" alt="">
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="images/logo-white.png" alt="">
+                    <p class="text-white-75 mt-4 font-size-12 font-weight-400">Nous rendons toujours nos clients heureux en offrant autant de choix que possible.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">About</h3>
+                    <div class="d-flex flex-column font-size-12 font-weight-400">
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Autour de nous</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Contact</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Termes et conditions</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Contactez-nous</h3>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Envelope_icon.png" alt="">
+                        <span class="text-white-75">witodagold@contact.com</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Phone_icon.png" alt="">
+                        <span class="text-white-75">1245972678/589402165</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Marker_icon.png" alt="">
+                        <span class="text-white-75">street - city - country</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Suivez nous</h3>
+                    <p class="text-white-75 font-weight-400 font-size-12">Suivez-nous sur tous nos réseaux sociaux et recevez les dernières nouvelles sur Facebook, des vidéos pratiques sur Youtube et de magnifiques photos inspirantes sur Instagram et Pinterest.</p>
+
+                    <div class="d-flex mb-3">
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Facebook_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Twitter_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Instagram_icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white-75 border-top pt-3 border-white-75 font-size-12 font-weight-400">
+                Tous Les Droits Sont Réservés Pour Ce Site 
+            </div>
+        </div>
+    </footer>
+
+       
+
+    <script>
+
+        function login(){
+            document.getElementById('title').innerHTML = "Connectez-vous";
+            document.getElementById('img-right').style.height = "80%";
+        }
+        function register(){
+            document.getElementById('title').innerHTML = "Créez votre compte";
+            document.getElementById('img-right').style.height = "98%";
+        }
+        let jours = 1;
+        let hotels = 1;
+
+        $('select').selectpicker({
+            'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+        });
+
+        function addoptions2() {
+            $('#options2-container').append('<div> <div class="row"> <div class="col-md-6"> <label for="">Nom option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <input type="text" class="form-control border-left-0 rounded-8" placeholder="Nom option"> </div> </div> <div class="col-md-6"> <label for="">Prix option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix option"> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+        }
+
+        function removeHotel(e){
+            hotels--;
+            e.parent().parent().parent().remove();
+        }
+
+        function hidehotel(e, hotel){
+            e.parent().html(' <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#hotel-collapse'+ hotel +'" aria-expanded="false" aria-controls="hotel-collapse'+ hotel +'" onclick="showhotel($(this), '+ hotel +')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher l’hotel</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeHotel($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+        }
+
+        function showhotel(e, hotel){
+            e.parent().html(' <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#hotel-collapse'+ hotel +'" aria-expanded="false" aria-controls="hotel-collapse'+ hotel +'" onclick="hidehotel($(this), '+ hotel +')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer l’hotel</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeHotel($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+        }
+
+        function addHotel() {
+            hotels++;
+
+            $('#hotels-container').append('<div><h4 class="text-dark font-weight-700 mb-4">Hôtel numéro '+ hotels +'</h4> <div class="collapse show" id="hotel-collapse'+ hotels +'"> <label for="">Nom de l’hotel</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/hotel.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01"> <option value="" selected disabled>Nom de l\'hôtel</option> <option value="">Extérieur</option> </select> </div> <div class="text-right"> <button type="button" class="btn btn-link"> <img src="images/icons/plus.png" alt=""> <span class="ml-2" data-toggle="modal" data-target="#addhotelmodal">Ajouter un hotel</span> </button> </div> <div class="row"> <div class="col-md-4 mb-2"> <label for="">Les repas</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/Food_icon_blue.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" multiple data-title="Les repas" id="inputGroupSelect01"> <option value="">Extérieur</option> <option value="">Extérieur</option> <option value="">Extérieur</option> </select> </div> </div> <div class="col-md-4 mb-2"> <label for="">Prix de l\'hôtel</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix de l\'hôtel"> </div> </div> <div class="col-md-4 mb-2"> <label for="">Nombre de nuit</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Nombre de nuit"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Profit adultes</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Profit adultes"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Profit enfants</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Profit enfants"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Commission des adultes pour l\'agence</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Commission des adultes pour l\'agence"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Commission des enfants pour l\'agence</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Commission des enfants pour l\'agence"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Commission des adultes pour le site</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Commission des adultes pour le site"> </div> </div> <div class="col-md-6 mb-2"> <label for="">Commission des enfants pour le site</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Commission des enfants pour le site"> </div> </div> </div> <h4 class="font-weight-700 text-dark mb-4">Prix total pour le bus</h4> <div class="row"> <div class="col-md-4"> <label for="">Prix total</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix total"> </div> </div> <div class="col-md-4"> <label for="">Prix du marché</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix du marché"> </div> </div> <div class="col-md-4"> <label for="">Prix du marché - Prix total</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix du marché - Prix total"> </div> </div> </div> <h4 class="text-dark font-weight-700 my-4">Les enfants payés</h4> <div class="row"> <div class="col-md-4"> <label for="">Min age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Min age"> </div> </div> <div class="col-md-4"> <label for="">Max age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Max age"> </div> </div> <div class="col-md-4"> <label for="">Prix</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix"> </div> </div> </div> <div id="paid-kids-container'+ hotels +'"> </div> <div class="text-right"> <button type="button" class="btn btn-link" onclick="addPaidKids('+ hotels +')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Plus</span> </button> </div> <h4 class="text-dark font-weight-700 my-4">Les enfants Gratuit</h4> <label for="">Type</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01" onchange="freeForKids(this.value, '+hotels+')"> <option value="first" selected >Premier enfant gratuit</option> <option value="age">Avec l’age</option> </select> </div> <div id="first-kid'+hotels+'" > <div class="d-flex justify-content-between my-4"> <div> <input class="mr-2" type="checkbox" id="first-kid-box-'+hotels+'" checked> <label for="first-kid-box-'+hotels+'" class="font-weight-400">Premier Enfant Gratuit ?</label> </div> <span class="mr-3 font-weight-500">Cet enfant :</span> <div> <input class="mr-2 " type="radio" name="siege" id="avec-'+hotels+'" checked> <label for="avec-'+hotels+'">Avec Siège</label> </div> <div> <input class="ml-3 mr-2" type="radio" name="siege" id="sans-'+hotels+'"> <label for="sans-'+hotels+'">Sans Siège</label> </div> </div> </div> <div id="age-kid'+hotels+'" style="display: none;"> <div class="row"> <div class="col-md-6"> <label for="">Min age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Min age"> </div> </div> <div class="col-md-6"> <label for="">Max age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Max age"> </div> </div> </div> <div class="d-flex my-4"> <span class="mr-3 font-weight-500">Cet enfant :</span> <div> <input class="mr-2 " type="radio" name="siege" id="avec2-'+hotels+'" checked> <label for="avec2-'+hotels+'">Avec Siège</label> </div> <div> <input class="ml-3 mr-2" type="radio" name="siege" id="sans2-'+hotels+'"> <label for="sans2-'+hotels+'">Sans Siège</label> </div> </div> </div> <h4 class="my-4 text-dark font-weight-700">Les chambres</h4> <div class="row"> <div class="col-md-4"> <label for="">Type du chambre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01"> <option value="" selected disabled>Type du chambre</option> <option value="">Extérieur</option> </select> </div> </div> <div class="col-md-4"> <label for="">Prix du chambre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix du chambre"> </div> </div> <div class="col-md-4"> <label for="">Nombre des chambres</label> <div class="d-flex"> <button type="button" class="btn btn-lg btn-primary font-weight-700" onclick="add_one($(this))">+</button> <input class="form-control form-control-lg mx-1 rounded-8 text-center font-size-14" type="number" name="" id="" value="01" style="width: 50px; height: 50px;"> <button type="button" class="btn btn-lg btn-primary font-weight-700" onclick="minus_one($(this))">-</button> </div> </div> </div> <div id="chambres-container'+ hotels +'"> </div> <div class="text-right"> <button type="button" class="btn btn-link" onclick="addChambresInputs('+ hotels +')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Plus</span> </button> </div> <h4 class="my-4 text-dark font-weight-700">Les Options individuèls payés</h4> <div class="row"> <div class="col-md-6"> <label for="">Nom option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <input type="text" class="form-control border-left-0 rounded-8" placeholder="Nom option"> </div> </div> <div class="col-md-6"> <label for="">Prix option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix option"> </div> </div> </div> <div id="options1-container'+ hotels +'"> </div> <div class="text-right"> <button type="button" class="btn btn-link" onclick="addOptions1('+hotels+')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Plus</span> </button> </div> </div> <div class="text-right my-3"> <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#hotel-collapse'+ hotels +'" aria-expanded="false" aria-controls="hotel-collapse'+ hotels +'" onclick="hidehotel($(this), '+ hotels +')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer l’hotel</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeHotel($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function addOptions1(e){
+            $('#options1-container' + e).append('<div class="my-3"> <div class="row"> <div class="col-md-6"> <label for="">Nom option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <input type="text" class="form-control border-left-0 rounded-8" placeholder="Nom option"> </div> </div> <div class="col-md-6"> <label for="">Prix option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix option"> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function addChambresInputs(e){
+            $('#chambres-container' + e).append('<div class="my-3"> <div class="row"> <div class="col-md-4"> <label for="">Type du chambre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01"> <option value="" selected disabled>Type du chambre</option> <option value="">Extérieur</option> </select> </div> </div> <div class="col-md-4"> <label for="">Prix du chambre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix du chambre"> </div> </div> <div class="col-md-4"> <label for="">Nombre des chambres</label> <div class="d-flex"> <button type="button" class="btn btn-lg btn-primary font-weight-700" onclick="add_one($(this))">+</button> <input class="form-control form-control-lg mx-1 rounded-8 text-center font-size-14" type="number" name="" id="" value="01" style="width: 50px; height: 50px;"> <button type="button" class="btn btn-lg btn-primary font-weight-700" onclick="minus_one($(this))">-</button> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function addPaidKids(e){
+            $('#paid-kids-container' + e).append('<div> <div class="row"> <div class="col-md-4"> <label for="">Min age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Min age"> </div> </div> <div class="col-md-4"> <label for="">Max age</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Max age"> </div> </div> <div class="col-md-4"> <label for="">Prix</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input type="number" class="form-control border-left-0 rounded-8" placeholder="Prix"> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function freeForKids(e, hotel){
+            if(e == 'first'){
+                $('#age-kid'+hotel).hide();
+                $('#first-kid'+hotel).show();
+            }
+            
+            if(e == 'age'){
+                $('#age-kid'+hotel).show();
+                $('#first-kid'+hotel).hide();
+            }
+        }
+
+        function removeForm(e){
+            jours--;
+            e.parent().parent().remove();
+        }
+
+
+
+        function addfileinputs() {
+            $('#files-container').append('<div> <label for="">Ajouter une image</label> <div class="border rounded-8 mt-2 mb-3"> <input class="form-control border-0 rounded-8 h-100" type="file" name="" id=""> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+        
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+        }
+
+        function addForm(){
+            jours++;
+
+            $('#program-container').append('<div> <h4 class="text-dark font-weight-700 my-4">Jour '+ jours +'</h4> <div class="border rounded-8 mt-2 mb-3"> <input class="form-control border-0 rounded-8 h-100" type="file" name="" id=""> </div> <label for="">Titre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/plane.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="text" placeholder="Entrez une place correct"> </div> <label for="">Déscription sur le program</label> <div class="d-flex "> <div class="border px-2 pt-1 border-right-0 rounded-left-8 bg-white"> <img src="images/icons/plane.png" alt=""> </div> <textarea maxlength="400" class="form-control border-left-0 rounded-right-8" placeholder="Déscription sur le program" onkeyup="maxstr($(this))" style="resize: none;" name="" id="" rows="5"></textarea> </div> <small class="text-muted font-weight-400 chars">0/400 caractères</small> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeForm($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+        
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+        }
+
+        function maxstr(e){
+            let target = e.parent().next();
+            target.text(e.val().length + '/400 caractères'); 
+        }
+
+        function addinputsramassage() {
+            $('#ramassage-container').append('<div><div class="row"> <div class="col-md-4"> <label for="">Wilayas</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/globe.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01"> <option value="" selected disabled>Wilaya</option> <option value="">Extérieur</option> </select> </div> </div> <div class="col-md-4"> <label for="">Addresse</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/globe.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="text" placeholder="Entrez une place correct"> </div> </div> <div class="col-md-4"> <label for="">Temp</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/clock.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8 bg-white" type="time" placeholder="--:--" name="" id=""> </div> </div> </div> <div class="text-right"> <button class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div></div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function transport(e) {
+            switch (e.value) {
+                case 'avion':
+                case 'bateau':
+                    $('#ticket-avion').show();
+                    $('#taxi').hide();
+                    break;
+                case 'taxi':
+                    $('#ticket-avion').hide();
+                    $('#taxi').show();
+                    break;
+                default:
+                    $('#ticket-avion').hide();
+                    $('#taxi').hide();
+                    break;
+            }
+        }
+
+        function destin(e) {
+            if(e.value == 'interieur'){
+                $('#interieur').show();
+                $('#exterieur').hide();
+            }else{
+                $('#interieur').hide();
+                $('#exterieur').show();
+            }
+        }
+
+        function addinputsTotal() {
+            $('.dynamic-form-container-total').append('<div> <div class="row"> <div class="col-md-6"> <label for="">Dépenses totales</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Dépenses totales"> </div> </div> <div class="col-md-6"> <label for="">Cout</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Cout"> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img class="mr-2" src="images/icons/Trash_icon.png" alt=""> Supprimer </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function addinputs() {
+            $('.dynamic-form-container').append('<div> <div class="row"> <div class="col-md-6"> <label for="">Dépenses individuelles</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Dépenses individuelles"> </div> </div> <div class="col-md-6"> <label for="">Cout</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Cout"> </div> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img class="mr-2" src="images/icons/Trash_icon.png" alt=""> Supprimer </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            }).selectpicker('refresh');
+
+        }
+
+        function removeRow(e) {
+            e.parent().parent().remove();
+        }
+
+        function add_one(e){
+            e.next().val(parseInt(e.next().val()) + 1);
+        }
+
+        function minus_one(e){
+            if(e.prev().val() > 0){
+                e.prev().val(parseInt(e.prev().val()) - 1);
+            }
+        }
+
+        // init custom datepicker
+        $('input[type="date"]').flatpickr({
+			'locale': 'fr',
+            dateFormat: "d/m/Y",
+		});
+
+        $('input[type="time"]').flatpickr({
+            enableTime: true,
+            noCalendar: true,
+            dateFormat: "H:i",
+		});
+
+    </script>
+
+  </body>
+</html>
