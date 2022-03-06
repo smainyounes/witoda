@@ -107,7 +107,102 @@
                 <h1 class="text-dark font-weight-700">Choisir votre plan</h1>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="owl-carousel pricing-container">
+            <div>
+                <div class="pricing-div mx-auto" style="max-width: 260px;">
+                    <h4 class="text-primary font-weight-800 text-center pt-4 pb-0">Starter</h4>
+                    <hr style="width: 108px;" class="my-0">
+                    <div class="text-center py-5 font-weight-500">
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                    <hr style="width: 209px;">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span><h1 class="font-weight-800 text-dark">$100</h1></span><span>/mois</span>
+                    </div>
+                    <div class="px-4  pb-3 mt-2">
+                        <button class="btn btn-primary btn-block">Acheter</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="pricing-div mx-auto" style="max-width: 260px;">
+                    <h4 class="text-primary font-weight-800 text-center pt-4 pb-0">Premium</h4>
+                    <hr style="width: 108px;" class="my-0">
+                    <div class="text-center py-5 font-weight-500">
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                    <hr style="width: 209px;">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span><h1 class="font-weight-800 text-dark">$100</h1></span><span>/mois</span>
+                    </div>
+                    <div class="px-4  pb-3 mt-2">
+                        <button class="btn btn-primary btn-block">Acheter</button>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div class="pricing-div mx-auto" style="max-width: 260px;">
+                    <h4 class="text-primary font-weight-800 text-center pt-4 pb-0">Ultimate</h4>
+                    <hr style="width: 108px;" class="my-0">
+                    <div class="text-center py-5 font-weight-500">
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p><br>
+                        <p>
+                            <img src="images/icons/check.png" style="width: 14px;" class="mr-2" alt="">
+                            Lorem ipsum dolor
+                        </p>
+                    </div>
+                    <hr style="width: 209px;">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <span><h1 class="font-weight-800 text-dark">$100</h1></span><span>/mois</span>
+                    </div>
+                    <div class="px-4  pb-3 mt-2">
+                        <button class="btn btn-primary btn-block">Acheter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row justify-content-center">
             <div class="col-md-3">
                 <div class="pricing-div">
                     <h4 class="text-primary font-weight-800 text-center pt-4 pb-0">Starter</h4>
@@ -201,7 +296,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 
     <footer class="bg-dark py-4">
@@ -265,67 +360,23 @@
             'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
         });
 
-        function transportReserve(e){
-            if(e == 'taxi'){
-                $('#person').show();
-            }else{
-                $('#person').hide();
-            }
-        }
-
-        let owl3 = $('.main-img-carousel').owlCarousel({
-            items: 1,
-            stageOuterClass: 'owl-stage-outer pt-4',
-            loop: true
-        });
-
-        function changeimg(e){
-            // $('.main-img').attr('src', e.attr('src'));
-            owl3.trigger('to.owl.carousel', e);
-        }
-
-        $('.mainNext').click(function() {
-            owl3.trigger('next.owl.carousel');
-        });
-        // Go to the previous item
-        $('.mainPrev').click(function() {
-            owl3.trigger('prev.owl.carousel');
-        });
-
-        let owl2 = $('.images-carousel').owlCarousel({
-            responsive:{
-                0:{
-                    items:2
-                },
-                768:{
-                    items:4
-                },
-            },
-            stageOuterClass: 'owl-stage-outer pt-4',
-            loop: true
-        });
-
-        // owl carousel
-        let owl = $('.offre-carousel').owlCarousel({
+        let owl3 = $('.pricing-container').owlCarousel({
+            items: 3,
+            stageOuterClass: 'owl-stage-outer pb-5',
+            loop: true,
             responsive:{
                 0:{
                     items:1
                 },
                 768:{
-                    items:1.8
+                    items:3
                 },
+                576:{
+                    items:2
+                }
             },
-            stageOuterClass: 'owl-stage-outer pb-4',
-            loop: true
         });
-
-        $('.customNextBtn').click(function() {
-            owl.trigger('next.owl.carousel');
-        });
-        // Go to the previous item
-        $('.customPrevBtn').click(function() {
-            owl.trigger('prev.owl.carousel');
-        });
+        
     </script>
 
   </body>
