@@ -179,11 +179,11 @@ input[type=file]::file-selector-button:hover {
 }
 
 .text-dark{
-    color: #3E444D;
+    color: #3E444D !important;
 }
 
 .text-primary{
-    color: #3B71FE;
+    color: #3B71FE !important;
 }
 
 .custom-dropdown{
