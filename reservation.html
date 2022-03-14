@@ -1,0 +1,636 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    
+    <!-- custom range slider -->
+    <link rel="stylesheet" href="vendor/slider/style.css">
+    <script src="vendor/slider/script.js"></script>
+    
+    <!-- custom date picker -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/material_blue.css">
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+	<script src="https://npmcdn.com/flatpickr/dist/l10n/fr.js"></script>
+    
+    <link rel="stylesheet" href="vendor/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/owl/owl.theme.default.min.css">
+    <script src="vendor/owl/owl.carousel.min.js"></script>
+
+    <!-- select picker -->
+    <link rel="stylesheet" href="vendor/selectpicker/bootstrap-select.min.css">
+    <script src="vendor/selectpicker/bootstrap-select.js"></script>
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="css/custom.css">
+
+    <title>Reservation detail</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-light py-3">
+        <div class="container">
+            <a class="navbar-brand mr-4" href="#">
+                <img src="images/logo.png" alt="">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item mr-3">
+                  <a class="nav-link text-primary" href="#">Accueil <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">About</a>
+                </li>
+                <li class="nav-item mr-3">
+                    <a class="nav-link " href="#">Contact</a>
+                </li>
+              </ul>
+              <!-- <button class="btn btn-primary">Rejoignez-nous</button> -->
+              <div class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle d-flex align-items-center text-dark" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                <div class="rounded-circle bg-info" style="width: 40px; height: 40px; border: 2px solid white; box-shadow: 0 .2rem .5rem rgba(0,0,0,.15)!important;">
+                  <!-- <img class="rounded-circle" width="20px" height="20px" src="#" alt=""> -->
+                </div>
+                <span class="ml-2">Mon compte</span>
+                </a>
+                <div class="dropdown-menu custom-dropdown" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Emission</a>
+                    <a class="dropdown-item" href="#">Réception</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Créer un offre</a>
+                    <a class="dropdown-item" href="#">Mes offres</a>
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Tableau de board</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item text-danger" href="#">Déconnecter</a>
+                </div>
+              </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="">
+        <div style="background-image: url(images/Hero_bg_reservation.jpg); background-size: cover; background-position: center center; height: 60vh;">
+            <div class="container h-100 d-flex align-items-center">
+                <!-- <div>
+                    <h6 class="text-white font-weight-500 mb-0">Agence touristique - Hotel - Location des voitures</h6>
+                    <h1 class="text-white font-weight-800" style="font-size: 4rem;">Explorez le monde <br>
+                        avec nous !</h1>
+                </div> -->
+            </div>
+        </div>
+    </header>
+
+    <div class="container mb-5 mt-3">
+        <span class="text-muted font-weight-400">Accueil</span>
+        <span class="mx-3"> > </span>
+        <span class="text-primary font-weight-700">Réservation</span>
+    </div>
+
+    <div class="container pt-5 mb-5">
+        <div class="row">
+            <div class="col-md-7">
+                <div class="border-left border-primary pl-3" style="border-left-width: 2px !important;">
+                    <small class="text-primary" id="small-title">Information de réservation</small>
+                    <h1 class="font-weight-bold text-dark " id="title">Réservation</h1>
+                </div>
+                <h4 class="font-weight-700 text-primary h6 mt-4 mb-5">Top promo Tunisie 2020</h4>
+
+                <div>
+                    <div class="text-dark font-weight-700 h5">Adulte 01</div>
+                    <div class="my-3">
+                        <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label for="">Nom Complet</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/User_icon_blue.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="">Date de naissance</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                    <img src="images/icons/calendar.png" alt="">
+                                </label>
+                                </div>
+                                <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="">Wilaya</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                    <img src="images/icons/globe.png" alt="">
+                                </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Numéro de passport</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/ticket.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Numéro de passport">
+                        </div>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
+                        <div class="row">
+                            <div class="col-8 col-md-10">
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                        </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <button class="btn btn-link">Vérifier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-4">
+                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
+                        <div class="row">
+                            <div class="col-8 col-md-10">
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                        </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2 d-flex text-success">
+                                <div class="mt-2">
+                                    <img src="images/icons/CheckCircle.png" width="20px" weight="20px" alt="">
+                                    Vérifié
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h4>Code de vérification</h4>
+                    <p style="color: #636973;">Un SMS envoyé avec un code de vérification vient de vous être envoyé.</p>
+
+                    <div class="form-group">
+                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                        <div class="row">
+                            <div class="col-8 col-md-10">
+                                <div class="input-group mb-3 ">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img src="images/icons/ticket.png"  alt="">
+                                        </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8"  type="number" placeholder="8237635">
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <button class="btn btn-link">Vérifier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                        <div class="row">
+                            <div class="col-8 col-md-10">
+                                <div class="input-group mb-3 ">
+                    
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white left-invalid" for="inputGroupSelect01">
+                                            <img src="images/icons/ticket.png"  alt="">
+                                        </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-right-8 is-invalid"  type="number" value="8237635">
+                                    <div id="validationServer03Feedback" class="invalid-feedback">
+                                        Le code est faux
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2">
+                                <button class="btn btn-link">Vérifier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                        <div class="row">
+                            <div class="col-8 col-md-10">
+                                <div class="input-group mb-3 ">
+                    
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white  left-valid" for="inputGroupSelect01">
+                                            <img src="images/icons/ticket.png"  alt="">
+                                        </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-right-8 is-valid"  type="number" value="8237635">
+                                    <div id="validationServer03Feedback" class="valid-feedback">
+                                        Le code est vrai
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-md-2 ">
+                                <button class="btn btn-link">Vérifier</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <label for="">Type du chambre</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                    <img src="images/icons/bed.png" alt="">
+                                </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" data-title="Type du chambre" id="inputGroupSelect01">
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="">Des chose individuelles</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                    <img src="images/icons/bed.png" alt="">
+                                </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="adult-container">
+                    
+                </div>
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary" onclick="addAdult()">
+                        <img src="images/icons/User_icon_white.png" alt="">
+                        <span class="ml-2">Autre adultes</span>
+                    </button>
+                </div>
+
+                <div>
+                    <div class="text-dark font-weight-700 h5">Enfant 01</div>
+                    <div class="my-3">
+                        <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Nom Complet</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                <img src="images/icons/User_icon_blue.png" alt="">
+                            </label>
+                            </div>
+                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="">Date de naissance</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                    <img src="images/icons/calendar.png" alt="">
+                                </label>
+                                </div>
+                                <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="">Wilaya</label>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                    <img src="images/icons/globe.png" alt="">
+                                </label>
+                                </div>
+                                <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                    <option value="">Wilaya1</option>
+                                </select>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="form-group mb-4">
+                        <label for="">Des chose individuelles</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                            <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                <img src="images/icons/bed.png" alt="">
+                            </label>
+                            </div>
+                            <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
+                                <option value="">Wilaya1</option>
+                                <option value="">Wilaya1</option>
+                                <option value="">Wilaya1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="child-container">
+                       
+                    </div>
+                    <div class="text-right">
+                        <button type="button" class="btn btn-primary" onclick="addChild()">
+                            <img src="images/icons/User_icon_white.png" alt="">
+                            <span class="ml-2">Autre enfants</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="my-4">
+                    <button class="btn btn-primary px-5 py-2">Réserver</button>
+                </div>
+            </div>
+            <div class="col-md-5">
+                <div>
+                    <div class="font-weight-500">
+                        <div class="p-2 bg-gray d-flex align-items-center mb-3">
+                            <img class="mr-2" src="images/icons/Info_icon.png" alt="">
+                            <span>
+                                Informations générales
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                            <span>Nombre des adultes</span>
+                            <span>03</span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                            <span>Nombre des enfants</span>
+                            <span>02</span>
+                        </div>
+                    </div>
+                    <div class="font-weight-500">
+                        <div class="p-2 bg-gray d-flex align-items-center my-3">
+                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                            <span>
+                                Hotel
+                            </span>
+                        </div>
+                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                            <span>Type de chambre</span>
+                            <span>03</span>
+                        </div>
+                    </div>
+                    <div class="font-weight-500">
+                        <div class="p-2 bg-gray d-flex align-items-center my-3">
+                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                            <span>
+                                Des choses individuelles (Adultes )
+                            </span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 01</span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 02</span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 03</span>
+                        </div>
+                    </div>
+                    <div class="font-weight-500">
+                        <div class="p-2 bg-gray d-flex align-items-center my-3">
+                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                            <span>
+                                Des choses individuelles (Enfants )
+                            </span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 01</span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 02</span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Option 03</span>
+                        </div>
+                    </div>
+                    <div class="font-weight-500">
+                        <div class="p-2 bg-gray d-flex align-items-center my-3">
+                            <img class="mr-2" src="images/icons/Ticket_icon.svg" alt="">
+                            <span>
+                                Prix total
+                            </span>
+                        </div>
+                        <div class="py-2 text-dark mx-1">
+                            <span>Prix total</span>
+                        </div>
+                        <div class="text-primary mx-1">
+                            <span class="h4 font-weight-700">30,000 DA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <img class="img-fluid" src="images/logo-white.png" alt="">
+                    <p class="text-white-75 mt-4 font-size-12 font-weight-400">Nous rendons toujours nos clients heureux en offrant autant de choix que possible.</p>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">About</h3>
+                    <div class="d-flex flex-column font-size-12 font-weight-400">
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Autour de nous</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Contact</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Termes et conditions</a>
+                        <a class="text-decoration-none text-white-75  mb-2" href="#">Politique de confidentialité</a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Contactez-nous</h3>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Envelope_icon.png" alt="">
+                        <span class="text-white-75">witodagold@contact.com</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Phone_icon.png" alt="">
+                        <span class="text-white-75">1245972678/589402165</span>
+                    </div>
+                    <div class="mb-2 font-weight-400 font-size-12">
+                        <img class="mr-2" src="images/icons/Marker_icon.png" alt="">
+                        <span class="text-white-75">street - city - country</span>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h3 class="font-weight-700 h4 text-white mb-3">Suivez nous</h3>
+                    <p class="text-white-75 font-weight-400 font-size-12">Suivez-nous sur tous nos réseaux sociaux et recevez les dernières nouvelles sur Facebook, des vidéos pratiques sur Youtube et de magnifiques photos inspirantes sur Instagram et Pinterest.</p>
+
+                    <div class="d-flex mb-3">
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Facebook_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Twitter_icon.png" alt="">
+                        </a>
+                        <a href="#" class="mr-2">
+                            <img src="images/icons/Instagram_icon.png" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center text-white-75 border-top pt-3 border-white-75 font-size-12 font-weight-400">
+                Tous Les Droits Sont Réservés Pour Ce Site 
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        let adult = 1;
+        let child = 1;
+
+        function resetChildTitles(){
+            $('.child-title').each(function(i, obj) {
+                if(i < 10){
+                    $(this).text('Enfant 0'+ (i+2));
+                }else{
+                    $(this).text('Enfant '+ (i+2));
+                }
+            });
+        }
+
+        function toggleChild(e, num, etat){
+            // console.log(e.children().last().text());
+            if(etat == 'hide'){
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-2" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+            }else{
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-2" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                
+            }
+
+            resetChildTitles();
+        }
+
+        function addChild() {
+            child++;
+
+            $('#child-container').append('<div> <div class="text-dark font-weight-700 h5 child-title">Enfant 02</div> <div class="collapse show" id="child-collapse-'+ child +'"> <div class="my-3"> <small class="text-dark font-weight-700 ">Veuillez remplir tous les informations</small> </div> <div class="form-group mb-4"> <label for="">Nom Complet</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet"> </div> </div> <div class="row"> <div class="col-md-6 mb-3"> <label for="">Date de naissance</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/calendar.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY"> </div> </div> <div class="col-md-6 mb-3"> <label for="">Wilaya</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/globe.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01"> <option value="">Wilaya1</option> <option value="">Wilaya1</option> <option value="">Wilaya1</option> </select> </div> </div> </div> <div class="form-group mb-4"> <label for="">Des chose individuelles</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple> <option value="">Wilaya1</option> <option value="">Wilaya1</option> <option value="">Wilaya1</option> </select> </div> </div> </div> <div class="text-right my-3"> <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-'+child+'" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+child+', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            });
+
+            $('input[type="date"]').flatpickr({
+                'locale': 'fr',
+                dateFormat: "d/m/Y",
+            });
+
+            resetChildTitles();
+        }
+
+        function resetAdultTitles(){
+            $('.adult-title').each(function(i, obj) {
+                if(i < 10){
+                    $(this).text('Adulte 0'+ (i+2));
+                }else{
+                    $(this).text('Adulte '+ (i+2));
+                }
+            });
+        }
+
+        function toggleAdult(e, num, etat){
+            // console.log(e.children().last().text());
+
+            if(etat == 'hide'){
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-2" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+            }else{
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-2" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                
+            }
+
+            resetAdultTitles();
+        }
+
+        function addAdult() {
+            adult ++;
+
+            $('#adult-container').append('<div class="mt-5"> <div class="text-dark font-weight-700 h5 adult-title">Adulte 02</div> <div class="collapse show" id="adult-collapse-'+ adult +'"> <div class="my-3"> <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small> </div> <div class="form-group mb-4"> <label for="">Nom Complet</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/User_icon_blue.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet"> </div> </div> <div class="row"> <div class="col-md-6 mb-3"> <label for="">Date de naissance</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/calendar.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY"> </div> </div> <div class="col-md-6 mb-3"> <label for="">Wilaya</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/globe.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01"> <option value="">Wilaya1</option> <option value="">Wilaya1</option> <option value="">Wilaya1</option> </select> </div> </div> </div> <div class="form-group mb-4"> <label for="">Numéro de passport</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/ticket.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="text" placeholder="Numéro de passport"> </div> </div> <div class="form-group mb-4"> <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/phone_icon3.png" width="20px" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766"> </div> </div> <div class="row"> <div class="col-md-6"> <label for="">Type du chambre</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" data-title="Type du chambre" id="inputGroupSelect01"> <option value="">Wilaya1</option> <option value="">Wilaya1</option> <option value="">Wilaya1</option> </select> </div> </div> <div class="col-md-6"> <label for="">Des chose individuelles</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01"> <img src="images/icons/bed.png" alt=""> </label> </div> <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple> <option value="">Wilaya1</option> <option value="">Wilaya1</option> <option value="">Wilaya1</option> </select> </div> </div> </div> </div> <div class="text-right my-3"> <button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-'+ adult +'" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ adult +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+
+            $('select').selectpicker({
+                'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+            });
+
+            $('input[type="date"]').flatpickr({
+                'locale': 'fr',
+                dateFormat: "d/m/Y",
+            });
+
+            resetAdultTitles();
+
+        }
+
+        function removeRow(e) {
+            e.parent().parent().remove();
+            resetAdultTitles();
+            resetChildTitles();
+        }
+
+        $('select').selectpicker({
+            'styleBase': 'form-control border border-left-0 rounded-8 bg-white'
+        });
+
+        // init custom datepicker
+        $('input[type="date"]').flatpickr({
+			'locale': 'fr',
+            dateFormat: "d/m/Y",
+		});
+
+    </script>
+
+  </body>
+</html>
