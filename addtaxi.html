@@ -388,6 +388,15 @@
                                 <input class="form-control border-0 rounded-8 h-100"  type="file" name="" id="">
                             </div>
                         </div>
+                        <div id="option-container">
+
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-link" onclick="addOptions()">
+                                <img src="images/icons/plus.png" alt="">
+                                <span class="ml-2">Plus</span>
+                            </button>
+                        </div>
                         <div class="form-group mb-4">
                             <label for="">Titre</label>
                             <div class="input-group mb-3">
@@ -454,7 +463,7 @@
                   </div>
             </div>
             <div class="col-md-4">
-                <img class="img-fluid rounded-16 d-none d-md-block" src="images/taxi.png" alt="">
+                <img class="img-fluid rounded-16 d-none d-md-block" src="images/taxi2.png" alt="">
             </div>
         </div>
     </div>
@@ -514,6 +523,10 @@
     </footer>
 
     <script>
+        function addOptions(){
+            $('#option-container').append('<div> <div class="row"> <div class="col-md-6"> <label for="">Nom option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/Car_icon_blue.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Nom option"> </div> </div> <div class="col-md-6"> <label for="">Prix option</label> <div class="input-group mb-3"> <div class="input-group-prepend"> <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01"> <img src="images/icons/Car_icon_blue.png" alt=""> </label> </div> <input class="form-control border-left-0 rounded-8" type="number" placeholder="Prix option"> </div> </div> </div> <div class="form-group mb-4"> <label for="">Ajouter une image</label> <div class="border rounded-8 pricing-file w-100"> <input class="form-control border-0 rounded-8 h-100"  type="file" name="" id=""> </div> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
+        }
+
         function addImage(){
             $('#images-container').append('<div> <label for="">Ajouter une image</label> <div class="border rounded-8 pricing-file w-100"> <input class="form-control border-0 rounded-8 h-100"  type="file" name="" id=""> </div> <div class="text-right"> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button> </div> </div>');
         }

@@ -768,9 +768,9 @@
         function toggleChild(e, num, etat){
             // console.log(e.children().last().text());
             if(etat == 'hide'){
-                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-2" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-'+ num +'" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
             }else{
-                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-2" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#child-collapse-'+ num +'" aria-expanded="false" aria-controls="child-collapse" onclick="toggleChild($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer Enfant</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
                 
             }
 
@@ -808,9 +808,9 @@
             // console.log(e.children().last().text());
 
             if(etat == 'hide'){
-                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-2" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-'+ num +'" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'show\')"> <img src="images/icons/plus.png" alt=""> <span class="ml-2">Afficher adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
             }else{
-                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-2" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
+                e.parent().html('<button type="button" class="btn btn-link" data-toggle="collapse" data-target="#adult-collapse-'+ num +'" aria-expanded="false" aria-controls="adult-collapse" onclick="toggleAdult($(this), '+ num +', \'hide\')"> <img src="images/icons/minus.png" alt=""> <span class="ml-2">Masquer adulte</span> </button> <button type="button" class="btn btn-link text-danger" onclick="removeRow($(this))"> <img src="images/icons/Trash_icon.png" alt=""> <span class="ml-2">Supprimer</span> </button>');
                 
             }
 
