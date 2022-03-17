@@ -101,379 +101,590 @@
     </div>
 
     <div class="container pt-5 mb-5">
-        <div class="row">
-            <div class="col-md-7">
-                <div class="border-left border-primary pl-3" style="border-left-width: 2px !important;">
-                    <small class="text-primary" id="small-title">Information de réservation</small>
-                    <h1 class="font-weight-bold text-dark " id="title">Réservation</h1>
-                </div>
-                <h4 class="font-weight-700 text-primary h6 mt-4 mb-5">Top promo Tunisie 2020</h4>
-
-                <div>
-                    <div class="text-dark font-weight-700 h5">Adulte 01</div>
-                    <div class="my-3">
-                        <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label for="">Nom Complet</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
-                                <img src="images/icons/User_icon_blue.png" alt="">
-                            </label>
+        <div class="border-left border-primary pl-3" id="reservation" style="border-left-width: 2px !important;">
+            <small class="text-primary" id="small-title">Information de réservation</small>
+            <h1 class="font-weight-bold text-dark " id="title">Réservation</h1>
+        </div>
+        <div class="border-left border-primary pl-3" id="facturation" style="border-left-width: 2px !important; display: none;">
+            <small class="text-primary" id="small-title">voir facture</small>
+            <h1 class="font-weight-bold text-dark " id="title">Facturation</h1>
+        </div>
+        <ul class="nav nav-tabs mt-4" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="etap1-tab" onclick="etap1()" data-toggle="tab" href="#etap1" role="tab" aria-controls="etap1" aria-selected="true">Etape 01</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="etap2-tab" onclick="etap2()" data-toggle="tab" href="#etap2" role="tab" aria-controls="etap2" aria-selected="false">Etape 02</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show py-4 active" id="etap1" role="tabpanel" aria-labelledby="etap1-tab">
+                <div class="row mt-2">
+                    <div class="col-md-7">
+                        
+                        <h4 class="font-weight-700 text-primary h6 mt-4 mb-5">Top promo Tunisie 2020</h4>
+        
+                        <div>
+                            <div class="text-dark font-weight-700 h5">Adulte 01</div>
+                            <div class="my-3">
+                                <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
                             </div>
-                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="">Date de naissance</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
-                                    <img src="images/icons/calendar.png" alt="">
-                                </label>
-                                </div>
-                                <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
-                            </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="">Wilaya</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                    <img src="images/icons/globe.png" alt="">
-                                </label>
-                                </div>
-                                <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                </select>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="form-group mb-4">
-                        <label for="">Numéro de passport</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
-                                <img src="images/icons/ticket.png" alt="">
-                            </label>
-                            </div>
-                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Numéro de passport">
-                        </div>
-                    </div>
-                    <div class="form-group mb-4">
-                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
-                        <div class="row">
-                            <div class="col-8 col-md-10">
-                                <div class="input-group mb-3 ">
+        
+                            <div class="form-group mb-4">
+                                <label for="">Nom Complet</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
+                                    <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                        <img src="images/icons/User_icon_blue.png" alt="">
+                                    </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Date de naissance</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                            <img src="images/icons/calendar.png" alt="">
+                                        </label>
+                                        </div>
+                                        <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Wilaya</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
                                         <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                            <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                            <img src="images/icons/globe.png" alt="">
                                         </label>
+                                        </div>
+                                        <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                        </select>
                                     </div>
-                                    <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
+                                </div>
+        
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">Numéro de passport</label>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                    <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                        <img src="images/icons/ticket.png" alt="">
+                                    </label>
+                                    </div>
+                                    <input class="form-control border-left-0 rounded-8" type="text" placeholder="Numéro de passport">
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <button class="btn btn-link">Vérifier</button>
+                            <div class="form-group mb-4">
+                                <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
+                                <div class="row">
+                                    <div class="col-8 col-md-10">
+                                        <div class="input-group mb-3 ">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                                    <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                                </label>
+                                            </div>
+                                            <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <button class="btn btn-link">Vérifier</button>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group mb-4">
-                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
-                        <div class="row">
-                            <div class="col-8 col-md-10">
-                                <div class="input-group mb-3 ">
-                                    <div class="input-group-prepend">
+        
+                            <div class="form-group mb-4">
+                                <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Numéro de téléphone</label>
+                                <div class="row">
+                                    <div class="col-8 col-md-10">
+                                        <div class="input-group mb-3 ">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                                    <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                                </label>
+                                            </div>
+                                            <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2 d-flex text-success">
+                                        <div class="mt-2">
+                                            <img src="images/icons/CheckCircle.png" width="20px" weight="20px" alt="">
+                                            Vérifié
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <h4>Code de vérification</h4>
+                            <p style="color: #636973;">Un SMS envoyé avec un code de vérification vient de vous être envoyé.</p>
+        
+                            <div class="form-group">
+                                <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                                <div class="row">
+                                    <div class="col-8 col-md-10">
+                                        <div class="input-group mb-3 ">
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                                    <img src="images/icons/ticket.png"  alt="">
+                                                </label>
+                                            </div>
+                                            <input class="form-control border-left-0 rounded-8"  type="number" placeholder="8237635">
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <button class="btn btn-link">Vérifier</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                                <div class="row">
+                                    <div class="col-8 col-md-10">
+                                        <div class="input-group mb-3 ">
+                            
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text rounded-8 border-right-0 bg-white left-invalid" for="inputGroupSelect01">
+                                                    <img src="images/icons/ticket.png"  alt="">
+                                                </label>
+                                            </div>
+                                            <input class="form-control border-left-0 rounded-right-8 is-invalid"  type="number" value="8237635">
+                                            <div id="validationServer03Feedback" class="invalid-feedback">
+                                                Le code est faux
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2">
+                                        <button class="btn btn-link">Vérifier</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
+                                <div class="row">
+                                    <div class="col-8 col-md-10">
+                                        <div class="input-group mb-3 ">
+                            
+                                            <div class="input-group-prepend">
+                                                <label class="input-group-text rounded-8 border-right-0 bg-white  left-valid" for="inputGroupSelect01">
+                                                    <img src="images/icons/ticket.png"  alt="">
+                                                </label>
+                                            </div>
+                                            <input class="form-control border-left-0 rounded-right-8 is-valid"  type="number" value="8237635">
+                                            <div id="validationServer03Feedback" class="valid-feedback">
+                                                Le code est vrai
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-md-2 ">
+                                        <button class="btn btn-link">Vérifier</button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Type du chambre</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
                                         <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                            <img src="images/icons/phone_icon3.png" width="20px" alt="">
+                                            <img src="images/icons/bed.png" alt="">
                                         </label>
+                                        </div>
+                                        <select class="form-control border-left-0 rounded-8" data-title="Type du chambre" id="inputGroupSelect01">
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                        </select>
                                     </div>
-                                    <input class="form-control border-left-0 rounded-8 "  type="number" placeholder="+0099887766">
                                 </div>
-                            </div>
-                            <div class="col-4 col-md-2 d-flex text-success">
-                                <div class="mt-2">
-                                    <img src="images/icons/CheckCircle.png" width="20px" weight="20px" alt="">
-                                    Vérifié
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <h4>Code de vérification</h4>
-                    <p style="color: #636973;">Un SMS envoyé avec un code de vérification vient de vous être envoyé.</p>
-
-                    <div class="form-group">
-                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
-                        <div class="row">
-                            <div class="col-8 col-md-10">
-                                <div class="input-group mb-3 ">
-                                    <div class="input-group-prepend">
+                                <div class="col-md-6">
+                                    <label for="">Des chose individuelles</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
                                         <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                            <img src="images/icons/ticket.png"  alt="">
+                                            <img src="images/icons/bed.png" alt="">
                                         </label>
+                                        </div>
+                                        <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                        </select>
                                     </div>
-                                    <input class="form-control border-left-0 rounded-8"  type="number" placeholder="8237635">
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <button class="btn btn-link">Vérifier</button>
-                            </div>
                         </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
-                        <div class="row">
-                            <div class="col-8 col-md-10">
-                                <div class="input-group mb-3 ">
-                    
+        
+                        <div id="adult-container">
+                            
+                        </div>
+                        <div class="text-right">
+                            <button type="button" class="btn btn-primary" onclick="addAdult()">
+                                <img src="images/icons/User_icon_white.png" alt="">
+                                <span class="ml-2">Autre adultes</span>
+                            </button>
+                        </div>
+        
+                        <div>
+                            <div class="text-dark font-weight-700 h5">Enfant 01</div>
+                            <div class="my-3">
+                                <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
+                            </div>
+                            <div class="form-group mb-4">
+                                <label for="">Nom Complet</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text rounded-8 border-right-0 bg-white left-invalid" for="inputGroupSelect01">
-                                            <img src="images/icons/ticket.png"  alt="">
-                                        </label>
+                                    <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                        <img src="images/icons/User_icon_blue.png" alt="">
+                                    </label>
                                     </div>
-                                    <input class="form-control border-left-0 rounded-right-8 is-invalid"  type="number" value="8237635">
-                                    <div id="validationServer03Feedback" class="invalid-feedback">
-                                        Le code est faux
-                                    </div>
+                                    <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2">
-                                <button class="btn btn-link">Vérifier</button>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Date de naissance</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
+                                            <img src="images/icons/calendar.png" alt="">
+                                        </label>
+                                        </div>
+                                        <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="">Wilaya</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img src="images/icons/globe.png" alt="">
+                                        </label>
+                                        </div>
+                                        <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                            <option value="">Wilaya1</option>
+                                        </select>
+                                    </div>
+                                </div>
+        
                             </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="font-weight-500 text-dark" style="font-size:14px" for="inputEmail4">Code de vérification</label>
-                        <div class="row">
-                            <div class="col-8 col-md-10">
-                                <div class="input-group mb-3 ">
-                    
+                            <div class="form-group mb-4">
+                                <label for="">Des chose individuelles</label>
+                                <div class="input-group mb-3">
                                     <div class="input-group-prepend">
-                                        <label class="input-group-text rounded-8 border-right-0 bg-white  left-valid" for="inputGroupSelect01">
-                                            <img src="images/icons/ticket.png"  alt="">
-                                        </label>
+                                    <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                        <img src="images/icons/bed.png" alt="">
+                                    </label>
                                     </div>
-                                    <input class="form-control border-left-0 rounded-right-8 is-valid"  type="number" value="8237635">
-                                    <div id="validationServer03Feedback" class="valid-feedback">
-                                        Le code est vrai
-                                    </div>
+                                    <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
+                                        <option value="">Wilaya1</option>
+                                        <option value="">Wilaya1</option>
+                                        <option value="">Wilaya1</option>
+                                    </select>
                                 </div>
                             </div>
-                            <div class="col-4 col-md-2 ">
-                                <button class="btn btn-link">Vérifier</button>
+                            <div id="child-container">
+                               
+                            </div>
+                            <div class="text-right">
+                                <button type="button" class="btn btn-primary" onclick="addChild()">
+                                    <img src="images/icons/User_icon_white.png" alt="">
+                                    <span class="ml-2">Autre enfants</span>
+                                </button>
                             </div>
                         </div>
+                        
                     </div>
-
-                    <div class="row">
-                        <div class="col-md-6">
-                            <label for="">Type du chambre</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                    <img src="images/icons/bed.png" alt="">
-                                </label>
+                    <div class="col-md-5">
+                        <div>
+                            <div class="font-weight-500">
+                                <div class="p-2 bg-gray d-flex align-items-center mb-3">
+                                    <img class="mr-2" src="images/icons/Info_icon.png" alt="">
+                                    <span>
+                                        Informations générales
+                                    </span>
                                 </div>
-                                <select class="form-control border-left-0 rounded-8" data-title="Type du chambre" id="inputGroupSelect01">
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <label for="">Des chose individuelles</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                    <img src="images/icons/bed.png" alt="">
-                                </label>
+                                <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                                    <span>Nombre des adultes</span>
+                                    <span>03</span>
                                 </div>
-                                <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="adult-container">
-                    
-                </div>
-                <div class="text-right">
-                    <button type="button" class="btn btn-primary" onclick="addAdult()">
-                        <img src="images/icons/User_icon_white.png" alt="">
-                        <span class="ml-2">Autre adultes</span>
-                    </button>
-                </div>
-
-                <div>
-                    <div class="text-dark font-weight-700 h5">Enfant 01</div>
-                    <div class="my-3">
-                        <small class="text-dark font-weight-700 ">Veuillez remplir tous les information</small>
-                    </div>
-                    <div class="form-group mb-4">
-                        <label for="">Nom Complet</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                            <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
-                                <img src="images/icons/User_icon_blue.png" alt="">
-                            </label>
-                            </div>
-                            <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nom Complet">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-md-6 mb-3">
-                            <label for="">Date de naissance</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
-                                    <img src="images/icons/calendar.png" alt="">
-                                </label>
+                                <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                                    <span>Nombre des enfants</span>
+                                    <span>02</span>
                                 </div>
-                                <input class="form-control border-left-0 rounded-8 bg-white" type="date" placeholder="DD/MM/YYYY">
                             </div>
-                        </div>
-                        <div class="col-md-6 mb-3">
-                            <label for="">Wilaya</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                    <img src="images/icons/globe.png" alt="">
-                                </label>
+                            <div class="font-weight-500">
+                                <div class="p-2 bg-gray d-flex align-items-center my-3">
+                                    <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                                    <span>
+                                        Hotel
+                                    </span>
                                 </div>
-                                <select class="form-control border-left-0 rounded-8" data-title="Wilaya" id="inputGroupSelect01">
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                    <option value="">Wilaya1</option>
-                                </select>
+                                <div class="d-flex justify-content-between py-2 text-dark mx-1">
+                                    <span>Type de chambre</span>
+                                    <span>03</span>
+                                </div>
+                            </div>
+                            <div class="font-weight-500">
+                                <div class="p-2 bg-gray d-flex align-items-center my-3">
+                                    <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                                    <span>
+                                        Des choses individuelles (Adultes )
+                                    </span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 01</span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 02</span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 03</span>
+                                </div>
+                            </div>
+                            <div class="font-weight-500">
+                                <div class="p-2 bg-gray d-flex align-items-center my-3">
+                                    <img class="mr-2" src="images/icons/Building_icon.png" alt="">
+                                    <span>
+                                        Des choses individuelles (Enfants )
+                                    </span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 01</span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 02</span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Option 03</span>
+                                </div>
+                            </div>
+                            <div class="font-weight-500">
+                                <div class="p-2 bg-gray d-flex align-items-center my-3">
+                                    <img class="mr-2" src="images/icons/Ticket_icon.svg" alt="">
+                                    <span>
+                                        Prix total
+                                    </span>
+                                </div>
+                                <div class="py-2 text-dark mx-1">
+                                    <span>Prix total</span>
+                                </div>
+                                <div class="text-primary mx-1">
+                                    <span class="h4 font-weight-700">30,000 DA</span>
+                                </div>
                             </div>
                         </div>
-
-                    </div>
-                    <div class="form-group mb-4">
-                        <label for="">Des chose individuelles</label>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                            <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                <img src="images/icons/bed.png" alt="">
-                            </label>
-                            </div>
-                            <select class="form-control border-left-0 rounded-8" data-title="Des chose individuelles" id="inputGroupSelect01" multiple>
-                                <option value="">Wilaya1</option>
-                                <option value="">Wilaya1</option>
-                                <option value="">Wilaya1</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="child-container">
-                       
-                    </div>
-                    <div class="text-right">
-                        <button type="button" class="btn btn-primary" onclick="addChild()">
-                            <img src="images/icons/User_icon_white.png" alt="">
-                            <span class="ml-2">Autre enfants</span>
-                        </button>
                     </div>
                 </div>
                 <div class="my-4">
-                    <button class="btn btn-primary px-5 py-2">Réserver</button>
+                    <button type="button" class="btn btn-primary px-5 py-2" onclick="$('#etap2-tab').click()">Suivant</button>
                 </div>
             </div>
-            <div class="col-md-5">
-                <div>
-                    <div class="font-weight-500">
-                        <div class="p-2 bg-gray d-flex align-items-center mb-3">
-                            <img class="mr-2" src="images/icons/Info_icon.png" alt="">
-                            <span>
-                                Informations générales
-                            </span>
+            <div class="tab-pane fade py-4" id="etap2" role="tabpanel" aria-labelledby="etap2-tab">
+                <div class="row">
+                    <div class="col-md-7">
+                        <div class="bg-gray rounded-8 p-3 mb-3">
+                            <h3 class="font-weight-700 text-dark mb-3">Adultes et enfants</h3>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Adultes </span> 
+                                    <small>( 20.000DA / 01 Person )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        Nombre des persons: <span class="text-primary">03</span>
+                                    </div>
+                                    <div>
+                                        Prix : <span class="text-primary">60.000DA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Enfants 6 - 12 </span> 
+                                    <small>( 20.000DA / 01 Person )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        Nombre des enfants: <span class="text-primary">03</span>
+                                    </div>
+                                    <div>
+                                        Prix : <span class="text-primary">60.000DA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Enfants 2 - 6 </span> 
+                                    <small>( 20.000DA / 01 Person )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        Nombre des enfants: <span class="text-primary">03</span>
+                                    </div>
+                                    <div>
+                                        Prix : <span class="text-primary">60.000DA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Enfants -2 </span> 
+                                    <small>( Gratuit / 01 Person )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="d-flex justify-content-between">
+                                    <div>
+                                        Nombre des persons: <span class="text-primary">03</span>
+                                    </div>
+                                    <div>
+                                        Prix : <span class="text-primary">/</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
-                            <span>Nombre des adultes</span>
-                            <span>03</span>
+
+                        <div class="bg-gray rounded-8 p-3 mb-3">
+                            <h3 class="font-weight-700 text-dark mb-3">Services</h3>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Des choses Individuelles </span> 
+                                    <small>( Adultes )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Des choses Individuelles </span> 
+                                    <small>( Enfants )</small>
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                                <div class="mb-3">
+                                    Nom de service: <span class="text-primary">12000DA</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
-                            <span>Nombre des enfants</span>
-                            <span>02</span>
+
+                        <div class="bg-gray rounded-8 p-3 mb-3">
+                            <h3 class="font-weight-700 text-dark mb-3">Détails de paiement</h3>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Compte CCP </span> 
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="mb-2">
+                                    Nom & Prénom: <span class="text-primary">Achref Maher</span>
+                                </div>
+                                <div class="">
+                                    <div>
+                                        No de compte: <span class="text-primary">12030325</span>
+                                        <span class="ml-4">
+                                            Clé: <span class="text-primary">06</span>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Compte Bancaire </span> 
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="">
+                                    <div class="mb-2">
+                                        No de compte: <span class="text-primary">12030325</span>
+                                    </div>
+                                    <div>
+                                        Nom de la banque:  <span class="text-primary">Société Générale</span>
+                                    </div>
+                                </div>
+                                <div class="mt-2">
+                                    Nom & Prénom: <span class="text-primary">Achref Maher</span>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <div class="">
+                                    <span class="h5 font-weight-700 text-dark">Baridi Mob </span> 
+                                </div>
+                                <hr class="mt-1 mb-2">
+                                <div class="">
+                                    <div class="mb-2">
+                                        Rip: <span class="text-primary">12030325</span>
+                                    </div>
+                                    <div>
+                                        Nom & Prénom: <span class="text-primary">Achref Maher</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="font-weight-500">
-                        <div class="p-2 bg-gray d-flex align-items-center my-3">
-                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
-                            <span>
-                                Hotel
-                            </span>
+                    <div class="col-md-5">
+                        <div class="bg-gray rounded-8 mb-3">
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between mb-3">
+                                    <span>Adult et enfants</span>
+                                    <span class="font-weight-700">40.000DA</span>
+                                </div>
+                                <div class="d-flex justify-content-between ">
+                                    <span>Services</span>
+                                    <span class="font-weight-700">40.000DA</span>
+                                </div>
+                            </div>
+                            <hr class="my-2">
+                            <div class="p-3">
+                                <div class="d-flex justify-content-between">
+                                    <div class="h4 text-dark font-weight-700">Prix Total</div>
+                                    <div class="h4 text-primary font-weight-700">30,000 DA</div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="d-flex justify-content-between py-2 text-dark mx-1">
-                            <span>Type de chambre</span>
-                            <span>03</span>
-                        </div>
-                    </div>
-                    <div class="font-weight-500">
-                        <div class="p-2 bg-gray d-flex align-items-center my-3">
-                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
-                            <span>
-                                Des choses individuelles (Adultes )
-                            </span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 01</span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 02</span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 03</span>
-                        </div>
-                    </div>
-                    <div class="font-weight-500">
-                        <div class="p-2 bg-gray d-flex align-items-center my-3">
-                            <img class="mr-2" src="images/icons/Building_icon.png" alt="">
-                            <span>
-                                Des choses individuelles (Enfants )
-                            </span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 01</span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 02</span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Option 03</span>
+                        <div class="row">
+                            <div class="col-7">
+                                <button class="btn btn-primary w-100 py-2">Réserver</button>
+                            </div>
+                            <div class="col-5">
+                                <button class="btn btn-link d-flex">
+                                    <img src="images/icons/Print_icon.svg" alt="">
+                                    <span class="ml-2">Imprimer</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    <div class="font-weight-500">
-                        <div class="p-2 bg-gray d-flex align-items-center my-3">
-                            <img class="mr-2" src="images/icons/Ticket_icon.svg" alt="">
-                            <span>
-                                Prix total
-                            </span>
-                        </div>
-                        <div class="py-2 text-dark mx-1">
-                            <span>Prix total</span>
-                        </div>
-                        <div class="text-primary mx-1">
-                            <span class="h4 font-weight-700">30,000 DA</span>
-                        </div>
-                    </div>
+                </div>
+                <div class="mt-4">
+                    <button type="button" class="btn btn-light bg-gray px-5 py-2" onclick="$('#etap1-tab').click()">Précedent</button>
                 </div>
             </div>
         </div>
+        
     </div>
 
     <footer class="bg-dark py-4">
@@ -533,6 +744,16 @@
     <script>
         let adult = 1;
         let child = 1;
+
+        function etap2(){
+            $('#reservation').hide();
+            $('#facturation').show();
+        }
+
+        function etap1(){
+            $('#reservation').show();
+            $('#facturation').hide();
+        }
 
         function resetChildTitles(){
             $('.child-title').each(function(i, obj) {
