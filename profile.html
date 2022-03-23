@@ -246,15 +246,35 @@
                             </div>
                         </div>
                         <div id="bank" style="display: none;">
-                            <label for="">Numéro de compte</label>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
-                                    <img width="20px" src="images/icons/house.svg" alt="">
-                                </label>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label for="">Nom de Banque</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img width="20px" src="images/icons/house.svg" alt="">
+                                        </label>
+                                        </div>
+                                        <select class="form-control border-left-0 rounded-8" data-title="Nom de Banque" id="inputGroupSelect01" >
+                                            <option value="CCP">CCP</option>
+                                            <option value="Bank">Bank</option>
+                                            <option value="BaridiMob">Baridi Mob</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <input class="form-control border-left-0 rounded-8" type="number" placeholder="Numéro de compte">
+                                <div class="col-md-6">
+                                    <label for="">Numéro de compte</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                        <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                            <img width="20px" src="images/icons/house.svg" alt="">
+                                        </label>
+                                        </div>
+                                        <input class="form-control border-left-0 rounded-8" type="number" placeholder="Numéro de compte">
+                                    </div>
+                                </div>
                             </div>
+                            
                         </div>
                         <div id="baridimob" style="display: none;">
                             <label for="">Rib</label>
