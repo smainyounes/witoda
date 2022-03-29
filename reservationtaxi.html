@@ -269,7 +269,13 @@
                     </div>
                     
                 </div>
-                
+                <div class="mb-4 d-none d-md-flex ">
+                    <button class="btn btn-primary px-5 py-2 w-100">Réserver</button>
+                    <button class="btn btn-link d-flex text-right mx-5 ">
+                        <img src="images/icons/Print_icon.svg" alt="">
+                        <span class="ml-2">Imprimer</span>
+                    </button>
+                </div>
             </div>
             <div class="col-md-6">
                 <img class="img-fluid rounded-16 d-none d-md-block" src="images/car.png" alt="">
@@ -441,7 +447,7 @@
                     </div> -->
                     <div class="d-flex mb-4">
                         <div>
-                            <label for="">Nombre des jours</label>
+                            <label for="">N° des jours</label>
                             <div class="d-flex">
                                 <button type="button" class="btn btn-primary font-weight-700" onclick="add_one($(this))">+</button>
                                 <input class="form-control mx-1 rounded-8 text-center px-2" type="number" name="" id="" value="01" style="width: 40px; ">
@@ -449,7 +455,7 @@
                             </div>
                         </div>
                         <div class="ml-4">
-                            <label for="">Nombre de nuits</label>
+                            <label for="">N° de nuits</label>
                             <div class="d-flex">
                                 <button type="button" class="btn btn-primary font-weight-700" onclick="add_one($(this))">+</button>
                                 <input class="form-control mx-1 rounded-8 text-center px-2" type="number" name="" id="" value="01" style="width: 40px; ">
@@ -514,25 +520,25 @@
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label for="">Nombre des places haut</label>
+                            <label for="">N° des places haut</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
                                         <img src="images/icons/Car_icon_blue.png" alt="">
                                     </label>
                                 </div>
-                                <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nombre des places haut">
+                                <input class="form-control border-left-0 rounded-8" type="text" placeholder="N° des places haut">
                             </div>
                         </div>
                         <div class="col-md-4">
-                            <label for="">Nombre des places bas</label>
+                            <label for="">N° des places bas</label>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
                                     <label class="input-group-text border-right-0 bg-white rounded-8" for="inputGroupSelect01">
                                         <img src="images/icons/Car_icon_blue.png" alt="">
                                     </label>
                                 </div>
-                                <input class="form-control border-left-0 rounded-8" type="text" placeholder="Nombre des places bas">
+                                <input class="form-control border-left-0 rounded-8" type="text" placeholder="N° des places bas">
                             </div>
                         </div>
                     </div>
@@ -558,10 +564,10 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="mb-4 d-flex justify-content-between">
-                    <button class="btn btn-primary px-5 py-2">Réserver</button>
-                    <button class="btn btn-link d-flex">
+            <div class="col-md-6 d-block d-md-none">
+                <div class="mb-4 d-flex">
+                    <button class="btn btn-primary px-5 py-2 w-100">Réserver</button>
+                    <button class="btn btn-link d-flex text-right mx-5 ">
                         <img src="images/icons/Print_icon.svg" alt="">
                         <span class="ml-2">Imprimer</span>
                     </button>

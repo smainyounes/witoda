@@ -153,6 +153,20 @@
                         </div>
                     </div>
                     <div class="form-group mb-4">
+                        <label for="" class="">Type de l’hotel</label> 
+                        <div class="d-flex">
+                            <div class="custom-control custom-radio custom-control-inline pr-0">
+                                <input type="radio" id="avecgaz" name="gaz" class="custom-control-input" checked>
+                                <label class="custom-control-label" for="avecgaz">conventionné</label>
+                            </div>
+                            <div class="custom-control custom-radio custom-control-inline pr-0">
+                                <input type="radio" id="sansgaz" name="gaz" class="custom-control-input">
+                                <label class="custom-control-label" for="sansgaz">non conventionné</label>
+                            </div>
+                        </div>
+                          
+                    </div>
+                    <div class="form-group mb-4">
                         <label for="">Prix</label>
                         <div id="slider-range"></div>
                         <div class="d-flex justify-content-between mt-2">
@@ -472,7 +486,7 @@
 
     <!-- Modal -->
     <div class="modal modal-blur" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable modal-dialog-centered" role="document">
         <div class="modal-content border-0 rounded-16">
             <div class="modal-header border-0 pb-0">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -480,27 +494,98 @@
             </button>
             </div>
             <div class="modal-body pb-0">
-                <h3 class="text-dark font-weight-700 mb-3 h2">Les prix</h3>
+                <h3 class="text-primary font-weight-700 mb-3 h1">Les prix</h3>
                 <div class="mb-3">
-                    <span class="h5 font-weight-700 text-dark">Adultes </span> 
-                    <small>( 20.000DA / 01 Person )</small>
+                    <h4 class="text-dark font-weight-700 mb-3">Les dates</h4>
+                    <div class="form-group">
+                        <label for="">Les dates</label>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                              <label class="input-group-text rounded-8 border-right-0 bg-white" for="inputGroupSelect01">
+                                  <img src="images/icons/calendar.png" alt="">
+                              </label>
+                            </div>
+                            <select class="form-control border-left-0 rounded-8" id="inputGroupSelect01">
+                                <option selected>12/02/2021 - 12/02/2021</option>
+                                <option>12/02/2021 - 12/02/2021</option>
+                                <option>12/02/2021 - 12/02/2021</option>
+                            </select>
+                        </div>
+                    </div>
                 </div>
-                <div class="mb-3">
-                    <span class="h5 font-weight-700 text-dark">Enfants 6 - 12 </span> 
-                    <small>( 20.000DA / 01 Person )</small>
+
+                <hr>
+
+                <h4 class="text-dark font-weight-700 mb-3">Les Chambres</h4>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Chambre simple</td>
+                            <td class="font-weight-700 text-center">16,500 DZD</td>
+                            <td class="font-weight-700 text-right">15 Chambres</td>
+                        </tr>
+                        <tr>
+                            <td>Chambre à 2</td>
+                            <td class="font-weight-700 text-center">2500.00 DZD</td>
+                            <td class="font-weight-700 text-right">20 Chambres</td>
+                        </tr>
+                        <tr>
+                            <td>Chambre à 3</td>
+                            <td class="font-weight-700 text-center">2500.00 DZD</td>
+                            <td class="font-weight-700 text-right">20 Chambres</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="mb-3">
-                    <span class="h5 font-weight-700 text-dark">Enfants 2 - 6 </span> 
-                    <small>( 20.000DA / 01 Person )</small>
+
+                <hr>
+
+                <h4 class="text-dark font-weight-700 mb-3">Prix des enfants</h4>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Enfants 1 - 6</td>
+                            <td class="font-weight-700 text-right">5260.00 DZD</td>
+                        </tr>
+                        <tr>
+                            <td>Enfants 6 - 12</td>
+                            <td class="font-weight-700 text-right">5260.00 DZD</td>
+                        </tr>
+                    </table>
                 </div>
-                <div class="mb-3">
-                    <span class="h5 font-weight-700 text-dark">Enfants -2 </span> 
-                    <small>( Gratuit / 01 Person )</small>
+
+                <hr>
+
+                <h4 class="text-dark font-weight-700 mb-3">Enfants gratuit</h4>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Enfants 1 - 6</td>
+                            <td class="font-weight-700 text-right">/</td>
+                        </tr>
+                    </table>
                 </div>
+
+                <hr>
+
+                <h4 class="text-dark font-weight-700 mb-3">Les options individuels payés</h4>
+                <div class="table-responsive">
+                    <table class="table table-borderless">
+                        <tr>
+                            <td>Sauna</td>
+                            <td class="font-weight-700 text-right">16,500 DZD</td>
+                        </tr>
+                        <tr>
+                            <td>Picine</td>
+                            <td class="font-weight-700 text-right">2500.00 DZD</td>
+                        </tr>
+                    </table>
+                </div>
+
+
             </div>
             <div class="modal-footer border-0 d-flex justify-content-between pt-0">
-                <a href="#" class="btn btn-primary px-5 py-2" >Voir les détails</a>
-                <button type="button" class="btn btn-light bg-gray px-5 py-2" data-dismiss="modal">Fermer</button>
+                <a href="#" class="btn btn-primary px-4 px-md-5 py-2" >Voir les détails</a>
+                <button type="button" class="btn btn-light bg-gray px-4 px-md-5 py-2" data-dismiss="modal">Fermer</button>
             </div>
         </div>
         </div>
