@@ -145,6 +145,11 @@ input[type=file]::file-selector-button:hover {
     padding: 5px;
 }
 
+.hotel-card{
+    box-shadow: 0px 12px 24px rgb(0 0 0 / 8%);
+    border-radius: 24px;
+}
+
 .offre-card{
     box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
     border-radius: 24px;
@@ -199,6 +204,10 @@ input[type=file]::file-selector-button:hover {
     backdrop-filter: blur(8px);
 }
 /* overwriting bootstrap css */
+.bg-warning{
+    background: #FFB703 !important;
+}
+
 .is-valid{
     /* border-top-right-radius: 5px !important; */
     /* border-bottom-right-radius: 5px !important; */
@@ -281,6 +290,22 @@ input[type=file]::file-selector-button:hover {
 .owl-carousel .owl-item img {
     display: initial;
     width: unset;
+}
+
+.owl-dots{
+    position: relative;
+    margin-top: -25px !important;
+}
+.owl-theme .owl-dots .owl-dot span {
+    background: rgba(255, 255, 255, 0.5);
+    width: 8px;
+    height: 8px;
+}
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background: #ffffff;
+    box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 50%);
+    -webkit-box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 50%);
+    -moz-box-shadow: 0px 0px 0px 4px rgb(255 255 255 / 50%);
 }
 
 /* overwriting selectpicker */
